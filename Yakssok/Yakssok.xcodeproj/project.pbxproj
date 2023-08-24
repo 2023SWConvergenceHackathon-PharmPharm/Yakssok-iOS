@@ -11,6 +11,7 @@
 		3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5C42A97962600CAFCEC /* ContentView.swift */; };
 		3D5ED5C72A97962600CAFCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5C62A97962600CAFCEC /* Assets.xcassets */; };
 		3D5ED5CA2A97962600CAFCEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5C92A97962600CAFCEC /* Preview Assets.xcassets */; };
+		3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		3D5ED5C42A97962600CAFCEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D5ED5C62A97962600CAFCEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D5ED5C92A97962600CAFCEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				3D5ED5C22A97962600CAFCEC /* YakssokApp.swift */,
-				3D5ED5C42A97962600CAFCEC /* ContentView.swift */,
+				3D5ED5D22A979BFE00CAFCEC /* Extensions */,
+				3D5ED5D12A979BF700CAFCEC /* Model */,
+				3D5ED5D02A979BF100CAFCEC /* View */,
 				3D5ED5C62A97962600CAFCEC /* Assets.xcassets */,
 				3D5ED5C82A97962600CAFCEC /* Preview Content */,
 			);
@@ -65,6 +69,29 @@
 				3D5ED5C92A97962600CAFCEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3D5ED5D02A979BF100CAFCEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D5ED5C42A97962600CAFCEC /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D5ED5D12A979BF700CAFCEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D5ED5D22A979BFE00CAFCEC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			files = (
 				3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */,
 				3D5ED5C32A97962600CAFCEC /* YakssokApp.swift in Sources */,
+				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
