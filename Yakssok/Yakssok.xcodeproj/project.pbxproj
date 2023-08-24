@@ -29,7 +29,9 @@
 		3D5ED5E82A97AC0E00CAFCEC /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		3D5ED5E92A97AC0E00CAFCEC /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		3D5ED5EA2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
-		3D5ED5EE2A97ACA700CAFCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3D5ED5EE2A97ACA700CAFCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D5ED5EF2A97ADB000CAFCEC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3D5ED5F22A97AE0700CAFCEC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +64,11 @@
 		3D5ED5C12A97962600CAFCEC /* Yakssok */ = {
 			isa = PBXGroup;
 			children = (
-				3D5ED5EE2A97ACA700CAFCEC /* Info.plist */,
 				3D5ED5C22A97962600CAFCEC /* YakssokApp.swift */,
-				3D5ED5D22A979BFE00CAFCEC /* Extensions */,
-				3D5ED5D12A979BF700CAFCEC /* Model */,
 				3D5ED5D02A979BF100CAFCEC /* View */,
+				3D5ED5F12A97ADD700CAFCEC /* ViewModel */,
+				3D5ED5D12A979BF700CAFCEC /* Model */,
+				3D5ED5D22A979BFE00CAFCEC /* Extensions */,
 				3D5ED5D52A97A33400CAFCEC /* Resources */,
 				3D5ED5C62A97962600CAFCEC /* Assets.xcassets */,
 				3D5ED5C82A97962600CAFCEC /* Preview Content */,
@@ -93,6 +95,7 @@
 		3D5ED5D12A979BF700CAFCEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3D5ED5EF2A97ADB000CAFCEC /* README.md */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +112,7 @@
 		3D5ED5D52A97A33400CAFCEC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D5ED5EE2A97ACA700CAFCEC /* Info.plist */,
 				3D5ED5DF2A97A36100CAFCEC /* Font */,
 			);
 			path = Resources;
@@ -122,6 +126,14 @@
 				3D5ED5EA2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		3D5ED5F12A97ADD700CAFCEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3D5ED5F22A97AE0700CAFCEC /* README.md */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
