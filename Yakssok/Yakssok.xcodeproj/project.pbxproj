@@ -12,6 +12,10 @@
 		3D5ED5C72A97962600CAFCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5C62A97962600CAFCEC /* Assets.xcassets */; };
 		3D5ED5CA2A97962600CAFCEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5C92A97962600CAFCEC /* Preview Assets.xcassets */; };
 		3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */; };
+		3D5ED5E12A97A38E00CAFCEC /* Ex+ Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5E02A97A38E00CAFCEC /* Ex+ Font.swift */; };
+		3D5ED5EB2A97AC0E00CAFCEC /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5E82A97AC0E00CAFCEC /* Pretendard-Regular.otf */; };
+		3D5ED5EC2A97AC0E00CAFCEC /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5E92A97AC0E00CAFCEC /* Pretendard-Bold.otf */; };
+		3D5ED5ED2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5EA2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,15 +25,11 @@
 		3D5ED5C62A97962600CAFCEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D5ED5C92A97962600CAFCEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ Color.swift"; sourceTree = "<group>"; };
-		3D5ED5D62A97A35D00CAFCEC /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
-		3D5ED5D72A97A35D00CAFCEC /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
-		3D5ED5D82A97A35D00CAFCEC /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
-		3D5ED5D92A97A35D00CAFCEC /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
-		3D5ED5DA2A97A35E00CAFCEC /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
-		3D5ED5DB2A97A35E00CAFCEC /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
-		3D5ED5DC2A97A35E00CAFCEC /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
-		3D5ED5DD2A97A35E00CAFCEC /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
-		3D5ED5DE2A97A35E00CAFCEC /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		3D5ED5E02A97A38E00CAFCEC /* Ex+ Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ Font.swift"; sourceTree = "<group>"; };
+		3D5ED5E82A97AC0E00CAFCEC /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		3D5ED5E92A97AC0E00CAFCEC /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		3D5ED5EA2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		3D5ED5EE2A97ACA700CAFCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,7 @@
 		3D5ED5C12A97962600CAFCEC /* Yakssok */ = {
 			isa = PBXGroup;
 			children = (
+				3D5ED5EE2A97ACA700CAFCEC /* Info.plist */,
 				3D5ED5C22A97962600CAFCEC /* YakssokApp.swift */,
 				3D5ED5D22A979BFE00CAFCEC /* Extensions */,
 				3D5ED5D12A979BF700CAFCEC /* Model */,
@@ -100,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */,
+				3D5ED5E02A97A38E00CAFCEC /* Ex+ Font.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,15 +117,9 @@
 		3D5ED5DF2A97A36100CAFCEC /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				3D5ED5DE2A97A35E00CAFCEC /* Pretendard-Black.otf */,
-				3D5ED5D72A97A35D00CAFCEC /* Pretendard-Bold.otf */,
-				3D5ED5D82A97A35D00CAFCEC /* Pretendard-ExtraBold.otf */,
-				3D5ED5D62A97A35D00CAFCEC /* Pretendard-ExtraLight.otf */,
-				3D5ED5D92A97A35D00CAFCEC /* Pretendard-Light.otf */,
-				3D5ED5DA2A97A35E00CAFCEC /* Pretendard-Medium.otf */,
-				3D5ED5DB2A97A35E00CAFCEC /* Pretendard-Regular.otf */,
-				3D5ED5DC2A97A35E00CAFCEC /* Pretendard-SemiBold.otf */,
-				3D5ED5DD2A97A35E00CAFCEC /* Pretendard-Thin.otf */,
+				3D5ED5E92A97AC0E00CAFCEC /* Pretendard-Bold.otf */,
+				3D5ED5E82A97AC0E00CAFCEC /* Pretendard-Regular.otf */,
+				3D5ED5EA2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -187,6 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D5ED5CA2A97962600CAFCEC /* Preview Assets.xcassets in Resources */,
+				3D5ED5EC2A97AC0E00CAFCEC /* Pretendard-Bold.otf in Resources */,
+				3D5ED5ED2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf in Resources */,
+				3D5ED5EB2A97AC0E00CAFCEC /* Pretendard-Regular.otf in Resources */,
 				3D5ED5C72A97962600CAFCEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5ED5E12A97A38E00CAFCEC /* Ex+ Font.swift in Sources */,
 				3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */,
 				3D5ED5C32A97962600CAFCEC /* YakssokApp.swift in Sources */,
 				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
@@ -332,6 +332,7 @@
 				DEVELOPMENT_TEAM = G7X65ZSJ3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Yakssok/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -361,6 +362,7 @@
 				DEVELOPMENT_TEAM = G7X65ZSJ3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Yakssok/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
