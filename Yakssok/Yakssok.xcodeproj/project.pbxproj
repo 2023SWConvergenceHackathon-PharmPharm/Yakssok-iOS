@@ -20,6 +20,9 @@
 		3D5ED5F82A98C51600CAFCEC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5F72A98C51600CAFCEC /* MainView.swift */; };
 		3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5F92A98CAE800CAFCEC /* DateCalendarView.swift */; };
 		3D5ED5FC2A98D2B600CAFCEC /* DateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5FB2A98D2B600CAFCEC /* DateComponent.swift */; };
+		3D5ED5FE2A98FA7700CAFCEC /* MedicineGroupRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5FD2A98FA7700CAFCEC /* MedicineGroupRow.swift */; };
+		3D5ED6002A98FC3200CAFCEC /* MedicineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5FF2A98FC3200CAFCEC /* MedicineRow.swift */; };
+		3D5ED6022A99007500CAFCEC /* Ex+ View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6012A99007500CAFCEC /* Ex+ View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		3D5ED5F72A98C51600CAFCEC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3D5ED5F92A98CAE800CAFCEC /* DateCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalendarView.swift; sourceTree = "<group>"; };
 		3D5ED5FB2A98D2B600CAFCEC /* DateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateComponent.swift; sourceTree = "<group>"; };
+		3D5ED5FD2A98FA7700CAFCEC /* MedicineGroupRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineGroupRow.swift; sourceTree = "<group>"; };
+		3D5ED5FF2A98FC3200CAFCEC /* MedicineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineRow.swift; sourceTree = "<group>"; };
+		3D5ED6012A99007500CAFCEC /* Ex+ View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 			children = (
 				3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */,
 				3D5ED5E02A97A38E00CAFCEC /* Ex+ Font.swift */,
+				3D5ED6012A99007500CAFCEC /* Ex+ View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,6 +167,8 @@
 				3D5ED5F72A98C51600CAFCEC /* MainView.swift */,
 				3D5ED5F92A98CAE800CAFCEC /* DateCalendarView.swift */,
 				3D5ED5FB2A98D2B600CAFCEC /* DateComponent.swift */,
+				3D5ED5FD2A98FA7700CAFCEC /* MedicineGroupRow.swift */,
+				3D5ED5FF2A98FC3200CAFCEC /* MedicineRow.swift */,
 			);
 			path = MedicationManagement;
 			sourceTree = "<group>";
@@ -241,7 +250,10 @@
 				3D5ED5F82A98C51600CAFCEC /* MainView.swift in Sources */,
 				3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */,
 				3D5ED5F62A98BA2300CAFCEC /* AddGuideView.swift in Sources */,
+				3D5ED5FE2A98FA7700CAFCEC /* MedicineGroupRow.swift in Sources */,
+				3D5ED6022A99007500CAFCEC /* Ex+ View.swift in Sources */,
 				3D5ED5C32A97962600CAFCEC /* YakssokApp.swift in Sources */,
+				3D5ED6002A98FC3200CAFCEC /* MedicineRow.swift in Sources */,
 				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
 				3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */,
 				3D5ED5FC2A98D2B600CAFCEC /* DateComponent.swift in Sources */,
@@ -380,8 +392,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,8 +423,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

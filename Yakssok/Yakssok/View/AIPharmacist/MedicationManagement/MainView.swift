@@ -13,12 +13,18 @@ struct MainView: View {
             header
                 .padding(.horizontal, 24)
                 .padding(.bottom, 32)
+                .padding(.top, 24)
             
             news
                 .padding(.horizontal, 24)
                 .padding(.bottom, 26)
             
             DateCalendarView()
+                .padding(.bottom, 22)
+            
+            medicineGroupList
+            
+            Spacer()
         }
     }
 }
@@ -70,6 +76,16 @@ extension MainView {
         )
         .background(Color.theme.gray.gray6)
 
+    }
+    
+    private var medicineGroupList: some View {
+        VStack(spacing: 14) {
+            MedicineGroupRow(isLongTerm: false)
+                .padding(.horizontal, 24)
+            
+            MedicineGroupRow(isLongTerm: true)
+                .padding(.horizontal, 24)
+        }
     }
 }
 
