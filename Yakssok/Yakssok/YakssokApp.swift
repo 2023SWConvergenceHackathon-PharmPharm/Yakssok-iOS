@@ -11,7 +11,9 @@ import SwiftUI
 struct YakssokApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(medicationManagementViewModel: MedicationManagementViewModel())
+//            ContentView(medicationManagementViewModel: MedicationManagementViewModel())
+            MedicineDetailView()
+                .environmentObject(Medication())
         }
     }
 }
