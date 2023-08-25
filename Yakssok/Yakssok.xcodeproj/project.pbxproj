@@ -18,6 +18,8 @@
 		3D5ED5ED2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5EA2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf */; };
 		3D5ED5F62A98BA2300CAFCEC /* AddGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5F52A98BA2300CAFCEC /* AddGuideView.swift */; };
 		3D5ED5F82A98C51600CAFCEC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5F72A98C51600CAFCEC /* MainView.swift */; };
+		3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5F92A98CAE800CAFCEC /* DateCalendarView.swift */; };
+		3D5ED5FC2A98D2B600CAFCEC /* DateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5FB2A98D2B600CAFCEC /* DateComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		3D5ED5F22A97AE0700CAFCEC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3D5ED5F52A98BA2300CAFCEC /* AddGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuideView.swift; sourceTree = "<group>"; };
 		3D5ED5F72A98C51600CAFCEC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3D5ED5F92A98CAE800CAFCEC /* DateCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalendarView.swift; sourceTree = "<group>"; };
+		3D5ED5FB2A98D2B600CAFCEC /* DateComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 			children = (
 				3D5ED5F52A98BA2300CAFCEC /* AddGuideView.swift */,
 				3D5ED5F72A98C51600CAFCEC /* MainView.swift */,
+				3D5ED5F92A98CAE800CAFCEC /* DateCalendarView.swift */,
+				3D5ED5FB2A98D2B600CAFCEC /* DateComponent.swift */,
 			);
 			path = MedicationManagement;
 			sourceTree = "<group>";
@@ -237,6 +243,8 @@
 				3D5ED5F62A98BA2300CAFCEC /* AddGuideView.swift in Sources */,
 				3D5ED5C32A97962600CAFCEC /* YakssokApp.swift in Sources */,
 				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
+				3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */,
+				3D5ED5FC2A98D2B600CAFCEC /* DateComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
