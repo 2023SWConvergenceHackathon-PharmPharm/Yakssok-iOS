@@ -24,6 +24,10 @@
 		3D5ED6002A98FC3200CAFCEC /* MedicineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5FF2A98FC3200CAFCEC /* MedicineRow.swift */; };
 		3D5ED6022A99007500CAFCEC /* Ex+ View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6012A99007500CAFCEC /* Ex+ View.swift */; };
 		3D5ED6042A990E0500CAFCEC /* Ex+ Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6032A990E0400CAFCEC /* Ex+ Transition.swift */; };
+		3D5ED6062A99122400CAFCEC /* MedicineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6052A99122400CAFCEC /* MedicineModel.swift */; };
+		3D5ED6082A99123500CAFCEC /* MedicineGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6072A99123500CAFCEC /* MedicineGroupModel.swift */; };
+		3D5ED60A2A991D8600CAFCEC /* MedicationManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */; };
+		3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		3D5ED5FF2A98FC3200CAFCEC /* MedicineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineRow.swift; sourceTree = "<group>"; };
 		3D5ED6012A99007500CAFCEC /* Ex+ View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ View.swift"; sourceTree = "<group>"; };
 		3D5ED6032A990E0400CAFCEC /* Ex+ Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ Transition.swift"; sourceTree = "<group>"; };
+		3D5ED6052A99122400CAFCEC /* MedicineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineModel.swift; sourceTree = "<group>"; };
+		3D5ED6072A99123500CAFCEC /* MedicineGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineGroupModel.swift; sourceTree = "<group>"; };
+		3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationManagementViewModel.swift; sourceTree = "<group>"; };
+		3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedMedicineModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				3D5ED5EF2A97ADB000CAFCEC /* README.md */,
+				3D5ED6052A99122400CAFCEC /* MedicineModel.swift */,
+				3D5ED6072A99123500CAFCEC /* MedicineGroupModel.swift */,
+				3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				3D5ED5F22A97AE0700CAFCEC /* README.md */,
+				3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -250,13 +262,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D5ED5E12A97A38E00CAFCEC /* Ex+ Font.swift in Sources */,
+				3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */,
+				3D5ED6062A99122400CAFCEC /* MedicineModel.swift in Sources */,
 				3D5ED5F82A98C51600CAFCEC /* MainView.swift in Sources */,
 				3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */,
 				3D5ED5F62A98BA2300CAFCEC /* AddGuideView.swift in Sources */,
 				3D5ED5FE2A98FA7700CAFCEC /* MedicineGroupRow.swift in Sources */,
 				3D5ED6022A99007500CAFCEC /* Ex+ View.swift in Sources */,
+				3D5ED6082A99123500CAFCEC /* MedicineGroupModel.swift in Sources */,
 				3D5ED5C32A97962600CAFCEC /* YakssokApp.swift in Sources */,
 				3D5ED6002A98FC3200CAFCEC /* MedicineRow.swift in Sources */,
+				3D5ED60A2A991D8600CAFCEC /* MedicationManagementViewModel.swift in Sources */,
 				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
 				3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */,
 				3D5ED6042A990E0500CAFCEC /* Ex+ Transition.swift in Sources */,

@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var medicationManagementViewModel: MedicationManagementViewModel
+    
     var body: some View {
         TabView {
             NavigationStack {
                 MainView()
+                    .environmentObject(medicationManagementViewModel)
             }
             .tabItem {
                 VStack {
@@ -41,6 +44,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(medicationManagementViewModel: MedicationManagementViewModel())
+            .environmentObject(MedicationManagementViewModel())
     }
 }

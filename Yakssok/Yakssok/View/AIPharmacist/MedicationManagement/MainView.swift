@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
+    // MARK: 뉴스 관련 변수
     let headlineSwitchTimer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
-    
+    @State var newId: UUID = UUID()
     @State var newsIndex: Int = 0
     let newsHeadlines: [String] = [
         "대웅제약 \"엔블로, 중동 진출...사우디아라비아에 품목허가신청\"",
@@ -18,6 +19,9 @@ struct MainView: View {
         "디지털치료기기‧인공지능(AI) 건강보험 등재 '가이드라인' 공개",
         "한림대동탄성심병원, 복지부 디지털헬스케어 실증사업에 2건 선정"
     ]
+    
+    // MARK: 약 관련
+    @EnvironmentObject var medicationManagementViewModel: MedicationManagementViewModel
     
     var body: some View {
         VStack {
@@ -99,11 +103,14 @@ extension MainView {
     
     private var medicineGroupList: some View {
         VStack(spacing: 14) {
-            MedicineGroupRow(isLongTerm: false)
-                .padding(.horizontal, 24)
-            
-            MedicineGroupRow(isLongTerm: true)
-                .padding(.horizontal, 24)
+            ForEach(medicationManagementViewModel.medicineGroup, id: \.id) { group in
+                MedicineGroupRow(managedMedicines: group.medicines, isLongTerm: group.isLongTerm, groupName: group.groupName, groupId: group.id)
+                    .padding(.horizontal, 24)
+                    .onReceive(medicationManagementViewModel.publisher) { id in
+                        newId = id
+                    }
+                    .id(newId)
+            }
         }
     }
 }
