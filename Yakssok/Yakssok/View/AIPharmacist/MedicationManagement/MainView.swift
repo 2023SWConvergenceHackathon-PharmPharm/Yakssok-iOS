@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct MainView: View {
+    let headlineSwitchTimer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    
+    @State var newsIndex: Int = 0
+    let newsHeadlines: [String] = [
+        "대웅제약 \"엔블로, 중동 진출...사우디아라비아에 품목허가신청\"",
+        "‘관리 사각’ 논란 선별급여 관리 강화…하반기 40여개 항목 적합성평가",
+        "에스티큐브, 혁신 항암신약 후보 '넬마스토바트' 美 FDA 1b∙2상 IND 제출",
+        "디지털치료기기‧인공지능(AI) 건강보험 등재 '가이드라인' 공개",
+        "한림대동탄성심병원, 복지부 디지털헬스케어 실증사업에 2건 선정"
+    ]
+    
     var body: some View {
         VStack {
             header
@@ -62,9 +73,17 @@ extension MainView {
                 .font(.caption1SemiBold)
                 .padding(.leading, 12)
             
-            Text("대웅제약 \"엔블로, 중동 진출...사우디아라비아에 품목허가신청\"")
+            Text(newsHeadlines[newsIndex])
                 .font(.caption1)
                 .padding(.trailing, 15)
+                .transition(.moveAndFade)
+                .animation(.easeIn(duration: 1), value: newsIndex)
+                .onReceive(headlineSwitchTimer) { _ in
+                    self.newsIndex = .random(in: 0...4)
+                }
+                .id(newsHeadlines[newsIndex])
+            
+            Spacer()
         }
         .lineLimit(1)
         .padding(.vertical, 12)

@@ -23,6 +23,7 @@
 		3D5ED5FE2A98FA7700CAFCEC /* MedicineGroupRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5FD2A98FA7700CAFCEC /* MedicineGroupRow.swift */; };
 		3D5ED6002A98FC3200CAFCEC /* MedicineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5FF2A98FC3200CAFCEC /* MedicineRow.swift */; };
 		3D5ED6022A99007500CAFCEC /* Ex+ View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6012A99007500CAFCEC /* Ex+ View.swift */; };
+		3D5ED6042A990E0500CAFCEC /* Ex+ Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6032A990E0400CAFCEC /* Ex+ Transition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		3D5ED5FD2A98FA7700CAFCEC /* MedicineGroupRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineGroupRow.swift; sourceTree = "<group>"; };
 		3D5ED5FF2A98FC3200CAFCEC /* MedicineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineRow.swift; sourceTree = "<group>"; };
 		3D5ED6012A99007500CAFCEC /* Ex+ View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ View.swift"; sourceTree = "<group>"; };
+		3D5ED6032A990E0400CAFCEC /* Ex+ Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ Transition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */,
 				3D5ED5E02A97A38E00CAFCEC /* Ex+ Font.swift */,
 				3D5ED6012A99007500CAFCEC /* Ex+ View.swift */,
+				3D5ED6032A990E0400CAFCEC /* Ex+ Transition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				3D5ED6002A98FC3200CAFCEC /* MedicineRow.swift in Sources */,
 				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
 				3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */,
+				3D5ED6042A990E0500CAFCEC /* Ex+ Transition.swift in Sources */,
 				3D5ED5FC2A98D2B600CAFCEC /* DateComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
