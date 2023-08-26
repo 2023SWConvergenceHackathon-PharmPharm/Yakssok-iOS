@@ -41,7 +41,7 @@ extension AddGuideView {
             Spacer()
             
             NavigationLink {
-                SearchView()
+                Text("검색뷰")
             } label: {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.theme.primary.main0)

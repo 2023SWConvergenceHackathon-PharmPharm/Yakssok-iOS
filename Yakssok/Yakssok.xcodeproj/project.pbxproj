@@ -48,6 +48,7 @@
 		BFF45D052A9A678D0027E72F /* CameraReconfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D042A9A678D0027E72F /* CameraReconfirmView.swift */; };
 		BFF45D072A9A67A80027E72F /* ChooseMedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D062A9A67A80027E72F /* ChooseMedicineView.swift */; };
 		BFF45D092A9A684C0027E72F /* SelectMedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D082A9A684C0027E72F /* SelectMedicineView.swift */; };
+		BFF45D0B2A9A71200027E72F /* ConfirmMedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D0A2A9A71200027E72F /* ConfirmMedicineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		BFF45D042A9A678D0027E72F /* CameraReconfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraReconfirmView.swift; sourceTree = "<group>"; };
 		BFF45D062A9A67A80027E72F /* ChooseMedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMedicineView.swift; sourceTree = "<group>"; };
 		BFF45D082A9A684C0027E72F /* SelectMedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMedicineView.swift; sourceTree = "<group>"; };
+		BFF45D0A2A9A71200027E72F /* ConfirmMedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMedicineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +269,7 @@
 				BFF45D042A9A678D0027E72F /* CameraReconfirmView.swift */,
 				BFF45D062A9A67A80027E72F /* ChooseMedicineView.swift */,
 				BFF45D082A9A684C0027E72F /* SelectMedicineView.swift */,
+				BFF45D0A2A9A71200027E72F /* ConfirmMedicineView.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				3D5ED6022A99007500CAFCEC /* Ex+ View.swift in Sources */,
 				3D5ED6082A99123500CAFCEC /* MedicineGroupModel.swift in Sources */,
 				BFF45D022A9A5D890027E72F /* SearchView.swift in Sources */,
+				BFF45D0B2A9A71200027E72F /* ConfirmMedicineView.swift in Sources */,
 				BFF45D092A9A684C0027E72F /* SelectMedicineView.swift in Sources */,
 				3D5ED5C32A97962600CAFCEC /* YakssokApp.swift in Sources */,
 				3D5ED6002A98FC3200CAFCEC /* MedicineRow.swift in Sources */,

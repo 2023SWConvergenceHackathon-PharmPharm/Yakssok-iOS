@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Namespace var namespace
     @State var pageNum: Int = 0
+    @State var pillNum: Int = 0
+    @State var isConfirmed: Bool = false
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             if pageNum == 0 {
-                CameraReconfirmView(pageNum: $pageNum)
+                CameraReconfirmView(pageNum: $pageNum, namespace: namespace)
             }
             else if pageNum == 1 {
-                ChooseMedicineView(pageNum: $pageNum)
+                ChooseMedicineView(pageNum: $pageNum, namespace: namespace)
+            }
+            else if pageNum == 2 {
+                ConfirmMedicineView(pageNum: $pageNum, pillNum: $pillNum, isConfirmed: $isConfirmed, namespace: namespace)
             }
         }
-        .padding(.horizontal, 24)
         .padding(.top, 16)
+        .animation(.spring(), value: pageNum)
         .navigationTitle(pageNum == 0 ? "" : "나의 약 찾기")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
@@ -38,11 +44,26 @@ struct SearchView: View {
                 if pageNum == 1 {
                     Text("다음")
                         .font(.headlineSemiBold)
-                        //.disabled(true)
                         .padding(.horizontal, 13)
                         .onTapGesture {
                             pageNum = 2
                         }
+                }
+                else if pageNum == 2 {
+                    Text("다음")
+                        .font(.headlineSemiBold)
+                        .padding(.horizontal, 13)
+                        .onTapGesture {
+                            if pillNum == 3 {
+                                pageNum += 1
+                            }
+                            else {
+                                pillNum += 1
+                                isConfirmed.toggle()
+                            }
+                        }
+                        .disabled(!isConfirmed)
+                        .foregroundColor(isConfirmed ? Color.theme.gray.black : Color.theme.gray.gray4)
                 }
                 else {
                     Image(systemName: "xmark")

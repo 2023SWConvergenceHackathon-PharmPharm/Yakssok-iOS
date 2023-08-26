@@ -9,16 +9,22 @@ import SwiftUI
 
 struct CameraReconfirmView: View {
     @Binding var pageNum: Int
+    let namespace: Namespace.ID
     
     var body: some View {
         Text("아래 사진으로 검색할까요?")
             .font(.pretendard(size: 26, .bold))
+            .padding(.horizontal, 24)
+            .padding(.vertical, 12)
         
         Image("screenshot")
             .resizable()
             .frame(width: 345, height: 345)
-            .padding(.vertical, 24)
+            .padding(24)
+            .matchedGeometryEffect(id: "image", in: namespace)
+        
         Spacer()
+        
         HStack {
             RoundedRectangle(cornerRadius: 12)
                 .fill(Color.theme.primary.main20)
@@ -39,11 +45,6 @@ struct CameraReconfirmView: View {
                     pageNum = 1
                 }
         }
-    }
-}
-
-struct CameraReconfirmView_Previews: PreviewProvider {
-    static var previews: some View {
-        CameraReconfirmView(pageNum: .constant(0))
+        .padding(.horizontal, 24)
     }
 }
