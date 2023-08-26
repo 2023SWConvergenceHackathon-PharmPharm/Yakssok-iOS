@@ -12,8 +12,10 @@ struct YakssokApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView(medicationManagementViewModel: MedicationManagementViewModel())
-            MedicineDetailView()
-                .environmentObject(Medication())
+//            MedicineDetailView(medName: "메티마졸")
+//                .environmentObject(Medication())
+//            DURAlertView()
+            TestView()
         }
     }
 }
