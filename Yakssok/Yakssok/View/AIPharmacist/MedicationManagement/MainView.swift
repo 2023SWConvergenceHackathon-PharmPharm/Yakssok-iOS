@@ -10,7 +10,6 @@ import SwiftUI
 struct MainView: View {
     // MARK: 뉴스 관련 변수
     let headlineSwitchTimer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
-    @State var newId: UUID = UUID()
     @State var newsIndex: Int = 0
     let newsHeadlines: [String] = [
         "대웅제약 \"엔블로, 중동 진출...사우디아라비아에 품목허가신청\"",
@@ -23,23 +22,52 @@ struct MainView: View {
     // MARK: 약 관련
     @EnvironmentObject var medicationManagementViewModel: MedicationManagementViewModel
     
+    // MARK: 뷰 관련
+    @State var newId: UUID = UUID()
+    @State var showModal: Bool = false
+    
     var body: some View {
-        VStack {
-            header
-                .padding(.horizontal, 24)
-                .padding(.bottom, 32)
-                .padding(.top, 24)
-            
-            news
-                .padding(.horizontal, 24)
-                .padding(.bottom, 26)
-            
-            DateCalendarView()
-                .padding(.bottom, 22)
-            
-            medicineGroupList
-            
-            Spacer()
+        ZStack {
+            VStack {
+                header
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 32)
+                    .padding(.top, 24)
+                
+                news
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 26)
+                
+                DateCalendarView()
+                    .padding(.bottom, 22)
+                
+                medicineGroupList
+                
+                Spacer()
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button {
+                            showModal = true
+                        } label: {
+                            Image("ChatBotIcon")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 70, height: 70)
+                                .padding(.trailing, 24)
+                                .padding(.bottom, 32)
+                        }
+                    }
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $showModal) {
+            NavigationView {
+                ChatBotMainView(showModal: $showModal)
+                    .navigationTitle("AI 약사")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
         }
     }
 }
@@ -112,11 +140,5 @@ extension MainView {
                     .id(newId)
             }
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }
