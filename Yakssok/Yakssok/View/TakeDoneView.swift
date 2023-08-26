@@ -1,24 +1,20 @@
 //
-//  PersonAddSheet.swift
+//  TakeDoneView.swift
 //  Yakssok
 //
-//  Created by Nayeon Kim on 2023/08/26.
+//  Created by Nayeon Kim on 2023/08/27.
 //
 
 import SwiftUI
 
-struct PersonAddView: View {
-    @State var name = ""
-    @State var isEditing = false
+struct TakeDoneView: View {
+    @State var name = "김경자"
     @State var isDone = false
     @State var isTapped1 = false
     @State var isTapped2 = false
     
     let leftButton = "chevron.left"
     let rightButton = "다음"
-    let title1 = "어르신의 이름은 무엇인가요?"
-    let title2 = "병원에서 약을 처방받으셨나요?"
-    let placeholder = "이름을 입력해주세요"
     let margin = 24.0
     let radius = 8.0
     
@@ -26,11 +22,10 @@ struct PersonAddView: View {
         NavigationView {
             VStack {
                 if !isDone {
-                    PersonTypeView()
+                    DoneCheckView()
                 } else {
-                    PrescriptionCheckView()
+                    DoneEndView()
                 }
-                Spacer()
             }
             .padding(.top, 60)
             .padding(.horizontal, margin)
@@ -51,14 +46,14 @@ struct PersonAddView: View {
                             .font(.headlineSemiBold)
                             .foregroundColor(handlerightButtonColor())
                     }
-                    .disabled((name.isEmpty) && (isTapped1 == false) && (isTapped2 == false))
+                    .disabled((isTapped1 == false) && (isTapped2 == false))
                 }
             }
         }
     }
     
     func handlerightButtonColor() -> Color {
-        if (name.isEmpty) && (isTapped1 == false) && (isTapped2 == false) {
+        if (isTapped1 == false) && (isTapped2 == false) {
             return ColorTheme().gray.gray4
         } else {
             return ColorTheme().gray.black
@@ -89,49 +84,28 @@ struct PersonAddView: View {
         }
     }
 }
-private extension PersonAddView {
-    
-    @ViewBuilder
-    func PersonTypeView() -> some View {
-        VStack(alignment: .leading, spacing: 45) {
-            Text(title1)
-                .font(.title1Bold)
-            
-            TextField(placeholder, text: $name, onEditingChanged: { editing in
-                self.isEditing = editing
-            })
-            .padding(.vertical, 15.5)
-            .padding(.leading, 12)
-            .background(
-                RoundedRectangle(cornerRadius: radius)
-                    .stroke(handleStrokeColor(isEditing))
-            )
-        }
-    }
-}
 
-private extension PersonAddView {
+private extension TakeDoneView {
     
     enum SelectButton {
-        case no
         case yes
+        case no
         
         var label: String {
             switch self {
-            case .no:
-                return "아니요"
             case .yes:
-                return "받았어요"
+                return "완료됐어요"
+            case .no:
+                return "아직이에요"
             }
         }
     }
     
     @ViewBuilder
-    func PrescriptionCheckView() -> some View {
-        VStack(alignment: .leading, spacing: 45) {
-            Text(title2)
+    func DoneCheckView() -> some View {
+        VStack(alignment: .leading, spacing: 48) {
+            Text("\(name) 어르신의\n복용 일정이 완료되었나요?")
                 .font(.title1Bold)
-            
             HStack(spacing: 25) {
                 selectButton($isTapped1, $isTapped2, SelectButton.no)
                     .background(
@@ -146,11 +120,13 @@ private extension PersonAddView {
                             .background(handleSelectButtonColor($isTapped2))
                     )
             }
+            Spacer()
+            NextButton()
         }
     }
 }
 
-private extension PersonAddView {
+private extension TakeDoneView {
     
     @ViewBuilder
     func selectButton(_ isChanged1: Binding<Bool>, _ isChanged2: Binding<Bool>, _ buttonType: SelectButton) -> some View {
@@ -166,8 +142,52 @@ private extension PersonAddView {
     }
 }
 
-struct PersonAddSheet_Previews: PreviewProvider {
+private extension TakeDoneView {
+    
+    @ViewBuilder
+    func NextButton() -> some View {
+        Button {
+            
+        } label: {
+            Text("다음")
+                .font(.body1SemiBold)
+                .foregroundColor(ColorTheme().background.white)
+                .padding(.vertical, 18.5)
+                .frame(maxWidth: .infinity)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(ColorTheme().primary.main40)
+                )
+                
+        }
+        
+    }
+}
+
+private extension TakeDoneView {
+    
+    @ViewBuilder
+    func DoneEndView() -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("\(name) 어르신의\n복약 일정을 종료했어요!")
+                .font(.title1Bold)
+                .foregroundColor(ColorTheme().gray.black)
+            HStack(spacing: 0) {
+                Text("약쏙")
+                    .font(.body1SemiBold)
+                    .foregroundColor(ColorTheme().primary.main40)
+                Text("과 함께 건강해졌기를 바라요  😄")
+                    .font(.body1)
+                    .foregroundColor(ColorTheme().gray.gray1)
+            }
+            Spacer()
+            NextButton()
+        }
+    }
+}
+
+struct TakeDoneView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonAddView()
+        TakeDoneView()
     }
 }
