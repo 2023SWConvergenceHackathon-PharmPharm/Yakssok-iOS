@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="ko" data-agent="PostmanRuntime/7.32.3">
+
+<head>
+    <link rel="canonical" href="https://terms.naver.com/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true;IE=edge">
+    <meta property="og:type" content="article">
+    <meta property="og:url"
+        content="https://terms.naver.com/medicineSearch.naver?mode=nameSearch&query=%EB%A9%94%ED%8B%B0%EB%A7%88%EC%A1%B8">
+    <meta property="og:title" content="의약품사전">
+    <meta property="og:image" content="https://ssl.pstatic.net/static/terms/common/img/og.png">
+    <meta property="og:description"
+        content="https://terms.naver.com/medicineSearch.naver?mode=nameSearch&query=%EB%A9%94%ED%8B%B0%EB%A7%88%EC%A1%B8">
+    <meta property="og:article:author" content="네이버 지식백과" />
+    <meta property="og:article:author:url" content="https://m.terms.naver.com" />
+    <meta name="viewport" content="width=1110" />
+
+    <title>의약품사전 : 지식백과</title>
+    <meta name="Description" CONTENT="어린이/학생백과, 동물/식물, 건강, 역사, 자연과학, 인문과학, 미술작품, 비주얼사전 등 전문가들이 정리한 지식을 제공하는 종합백과서비스" />
+    <link rel="stylesheet" type="text/css"
+        href="https://ssl.pstatic.net/static/terms/terms/css/terms_tlist.css?230706060548">
+    <link rel="stylesheet" type="text/css"
+        href="https://ssl.pstatic.net/static/terms/terms/css/terms_230427.css?230706060548">
+    <link rel="shortcut icon" href="/favicon.ico?230706060548" type="image/x-icon">
+
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://ssl.pstatic.net/static/maps/openapi_map/maps_openapi.css?230706060548">
+</head>
+
+<body id="termBody" class="">
+    <div id="wrap" class="">
+        <div id="u_skip">
+            <a href="#gnb"
+                onclick="document.getElementById('gnb').tabIndex=-1;document.getElementById('gnb').focus();return false;"><span>메인 메뉴로 바로가기</span></a>
+            <a href="#nav"
+                onclick="document.getElementById('nav').tabIndex=-1;document.getElementById('nav').focus();return false;"><span>주제분류 메뉴로 바로가기</span></a>
+            <a href="#content"
+                onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false;"><span>본문으로 바로가기</span></a>
+        </div>
+        <div id="header" role="banner">
+            <div class="gnb_wrap">
+                <div class="gnb_area">
+                    <div class="site_area">
+                        <ul class="site_list">
+                            <li><a href="http://openlectures.naver.com/" class="logo_openlectures" target="_blank"
+                                    onclick="nclk(this, 'rsv.openlt', '', '', 1);"><span class="blind">열린연단</span></a>
+                            </li>
+                            <li><a href="/list.naver?cid=44623&categoryId=63167" class="logo_library"
+                                    onclick="nclk(this, 'rsv.imagelibrary', '', '', 1);"><span class="blind">이미지 라이브러리</span></a>
+                            </li>
+                            <li><a href="http://dic.naver.com/" class="logo_dic" target="_blank"
+                                    onclick="nclk(this, 'rsv.dic', '', '', 1);"><span class="blind">사전</span></a></li>
+                        </ul>
+
+                        <div id="gnb" class="login_area">
+                            <script type="text/javascript" charset="utf-8"
+                                src="https://ssl.pstatic.net/static.gn/templates/gnb_utf8.nhn?2023082702"></script>
+                            <script type="text/javascript">
+                                gnb_brightness=3;window.attachEvent?window.attachEvent("onload",getGNB):window.addEventListener("load",getGNB,false);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="nav" class="header_area">
+                    <iframe frameborder="0" scrolling="no" src="about:blank"
+                        style="position:absolute;left:0;top:0;width:100%;height:54px;border:none;vertical-align:bottom;filter:alpha(opacity=0)"
+                        title="헤더"></iframe>
+                    <h1 class="service">
+                        <a href="https://www.naver.com/" class="logo_naver"
+                            onclick="nclk(this, 'STA.naverlogo', '', '', 1);"><span class="blind">NAVER</span></a>
+                        <a href="/" class="logo_terms"
+                            onclick="nclk(this, 'STA.terms', '', '', 1);"><span class="blind">지식백과</span></a>
+                    </h1>
+                    <div class="search_wrap">
+                        <form name="search" action="/search.naver" method="get" id="terms_search_form">
+                            <fieldset>
+                                <legend>지식백과 검색</legend>
+                                <div class="search_area">
+                                    <div class="search_box" id="searchBox">
+                                        <input name="query" type="text" value="" maxlength="100" title="검색" accesskey="s" class="search_input" id="term_query" autocomplete=off>
+                                        <a href="#" role="button" class="btn_updn _toggle">
+                                            <i class="icon"></i>
+                                            <span class="blind _toggleIcon">자동완성 펼치기</span>
+                                        </a>
+                                        <!-- 자동완성 -->
+                                        <div class="ly_auto" style="">
+                                            <iframe width="100%" src="about:blank" frameborder="0" title="버그픽스용"
+                                                class="bug_fix" style="filter:alpha(opacity=0)"></iframe>
+                                            <div class="wrap" id="atcmp">
+                                                <div class="words top _resultArea" style="display:none;">
+                                                    <ul class="_resultBox1">
+                                                        <!--             <li><a href="#" onclick="nclk(this, 'sch.autoclick', '', '@rank@', 1); return false;">@txt@</a><span style="display:none">@in_txt@</span></li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="words _noticeArea">
+                                                    <p class="msg co_basis_txt">
+                                                        현재 자동완성 기능을 사용하고 계십니다.
+                                                    </p>
+                                                </div>
+                                                <p class="func">
+                                                    <span>
+            <a href="https://help.naver.com/support/service/main.nhn?serviceNo=606&categoryNo=1987" onclick="parent.nclk(this,'sch.help','','', 1);" target="_blank">도움말</a> | <a class="funoff _off" href="#" onclick="nclk(this, 'sch.autooff', '', '', 1);return false;">자동완성 끄기</a>
+        </span>
+                                                </p>
+                                                <span class="atcmp_helper">기능을 다시 켤 때는 <span class="point">검색창</span>을
+                                                클릭하세요</span>
+                                            </div>
+                                        </div>
+                                        <!-- //자동완성 -->
+                                    </div>
+                                    <input type="submit" value="검색" class="btn_search _search" onclick="nclk(this, 'sch.search', '', '', 1);">
+                                    <input type="hidden" name="searchType" value="">
+                                    <input type="hidden" name="dicType" value="">
+                                    <input type="hidden" name="subject" value="">
+                                    <input type="button" value="통합검색" class="btn_search_all" onclick="nclk(this, 'sch.nx', '', '', 1); window.open('http://search.naver.com/search.naver?where=nexearch&sm=sta_hty.terms&ie=utf8&query=' + encodeURIComponent(document.getElementById('term_query').value)); return false;">
+            </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="category_wrap" id="categoryWrap">
+                        <a href="#" role="button" class="btn_category" id="evt-global-navigation-button"
+                            onclick="nclk(this, 'STA.category', '', '', 1);"><span class="blind">카테고리 보기</span></a>
+                        <div class="ly_category">
+                            <div class="category_area">
+                                <div class="section topic">
+                                    <strong class="title">주제백과</strong>
+                                    <ul class="category_list">
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=50871&categoryId=50871"
+                                                onclick="nclk(this, 'mnu.themelist', '50871', '', 1);">건강백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=60195&categoryId=60195"
+                                                onclick="nclk(this, 'mnu.themelist', '60195', '', 1);">수학/과학백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=44630&categoryId=44630"
+                                                onclick="nclk(this, 'mnu.themelist', '44630', '', 1);">음식백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=44623&categoryId=44623" class="new"
+                                                onclick="nclk(this, 'mnu.themelist', '44623', '', 1);">미술백과<span class="blind">new</span></a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=46675&categoryId=46675"
+                                                onclick="nclk(this, 'mnu.themelist', '46675', '', 1);">동물백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=46676&categoryId=46676"
+                                                onclick="nclk(this, 'mnu.themelist', '46676', '', 1);">식물백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=60419&categoryId=60419"
+                                                onclick="nclk(this, 'mnu.themelist', '60419', '', 1);">문학백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=61278&categoryId=61278"
+                                                onclick="nclk(this, 'mnu.themelist', '61278', '', 1);">역사백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=60418&categoryId=60418"
+                                                onclick="nclk(this, 'mnu.themelist', '60418', '', 1);">음악백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=60196&categoryId=60196"
+                                                onclick="nclk(this, 'mnu.themelist', '60196', '', 1);">밀리터리백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=48677&categoryId=48677"
+                                                onclick="nclk(this, 'mnu.themelist', '48677', '', 1);">비주얼백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=51613&categoryId=51613"
+                                                onclick="nclk(this, 'mnu.themelist', '51613', '', 1);">동영상백과</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="section general">
+                                    <strong class="title">종합백과</strong>
+                                    <ul class="category_list">
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=40942&categoryId=40942"
+                                                onclick="nclk(this, 'mnu.synlist', '40942', '', 1);">두산백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=44621&categoryId=44621"
+                                                onclick="nclk(this, 'mnu.synlist', '44621', '', 1);">한국민족문화대백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=58737&categoryId=58737"
+                                                onclick="nclk(this, 'mnu.synlist', '58737', '', 1);">네이버캐스트</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=51792&categoryId=51792"
+                                                onclick="nclk(this, 'mnu.synlist', '51792', '', 1);">한국향토문화전자대전</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=49190&categoryId=49190"
+                                                onclick="nclk(this, 'mnu.synlist', '49190', '', 1);">문화원형백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=57623&categoryId=57623"
+                                                onclick="nclk(this, 'mnu.synlist', '57623', '', 1);">조선향토대백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=44625&categoryId=44625"
+                                                onclick="nclk(this, 'mnu.synlist', '44625', '', 1);">어린이백과</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=44626&categoryId=44626"
+                                                onclick="nclk(this, 'mnu.synlist', '44626', '', 1);">학생백과</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="section subject">
+                                    <strong class="title">주제별 카테고리</strong>
+                                    <ul class="category_list">
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41697&categoryId=41697"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41697', '', 1);">인문과학</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41698&categoryId=41698"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41698', '', 1);">사회과학</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41699&categoryId=41699"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41699', '', 1);">기술/공학</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41700&categoryId=41700"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41700', '', 1);">자연과학</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41701&categoryId=41701"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41701', '', 1);">문화예술</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41702&categoryId=41702"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41702', '', 1);">생활/취미/스포츠</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41703&categoryId=41703"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41703', '', 1);">역사/문화</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41704&categoryId=41704"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41704', '', 1);">기관/단체</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=43702&categoryId=43702"
+                                                onclick="nclk(this, 'mnu.sbjlist', '43702', '', 1);">지역/국가</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=41706&categoryId=41706"
+                                                onclick="nclk(this, 'mnu.sbjlist', '41706', '', 1);">시사/상식/종합</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=50280&categoryId=50280"
+                                                onclick="nclk(this, 'mnu.sbjlist', '50280', '', 1);">용어해설</a>
+                                        </li>
+                                        <li class="category_item">
+                                            <a href="/list.naver?cid=50279&categoryId=50279"
+                                                onclick="nclk(this, 'mnu.sbjlist', '50279', '', 1);">참여이미지</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tlist_area" id="tlist_util_box">
+                                <p class="desc">
+                                    <strong class="title">
+                <a href="/tlist" onclick="nclk(this, 'mnu*k.main', '', '', 1);">
+                    지식리스트<i class="ico_beta"><span class="blind">Beta</span></i>
+                </a>
+            </strong>유용한 지식리스트를 만들어 지식백과 사용자들과 공유해보세요!
+                                </p>
+                                <ul class="tlist_list">
+                                    <li class="tlist_item">
+                                        <a href="/tlist/?type=my" onclick="nclk(this, 'mnu*k.curate', '', '', 1);">
+                                            만든리스트<em class="count __MY_CNT">999</em><i class="ico_arrow"></i>
+                                        </a>
+                                    </li>
+                                    <li class="tlist_item">
+                                        <a href="/tlist/?type=join" onclick="nclk(this, 'mnu*k.join', '', '', 1);">
+                                            참여한 리스트<em class="count __JOIN_CNT">999</em><i class="ico_arrow"></i>
+                                        </a>
+                                    </li>
+                                    <li class="tlist_item">
+                                        <a href="/tlist/?type=like" onclick="nclk(this, 'mnu*k.like', '', '', 1);">
+                                            좋아요 리스트<em class="count __LIKE_CNT">999</em><i class="ico_arrow"></i>
+                                        </a>
+                                    </li>
+                                    <li class="tlist_item">
+                                        <a href="/tlist/?type=history" onclick="nclk(this, 'mnu*k.read', '', '', 1);">
+                                            최근에 본 리스트<em class="count __HISTORY_CNT">999</em><i class="ico_arrow"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" role="button" class="btn_close"
+                                onclick="nclk(this, 'mnu.close', '', '', 1);return false;">
+                                <span class="blind">카테고리 레이어 닫기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headword_wrap">
+                <div class="headword_area">
+                    <div class="headword_info">
+                        <h2 class="title">
+                            <a href="/list.naver?cid=50871&categoryId=50871"
+                                onclick="nclk(this, 'sca.sctitle', '', '', 1);">
+                                <span>&#44148;&#44053;&#48177;&#44284;</span></a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div id="container">
+
+            <div id="content">
+
+
+                <div class="path_area">
+                    <a href="/list.naver?categoryId=51000"
+                        class="path_link selected">의약품사전</a><em class="count">21건</em></h3>
+                </div>
+                <div class="medicine_search_wrap active">
+                    <a href="#" class="medicine_link">
+                        <strong class="title"><i class="ico"></i>의약품검색</strong>
+                        <span class="desc">의약품 정보 또는 약모양으로 찾아볼 수 있어요</span>
+                        <span class="link">접기<i class="ico_arrow"></i></span>
+                    </a>
+                    <div class="medicine_search">
+                        <form name="medicineNameSearchForm" action="/medicineSearch.naver" method="get"
+                            id="medicineNameSearchForm">
+                            <input type="hidden" name="mode" value="nameSearch">
+                            <label for="medicine_name" class="label_search"><strong>약 정보</strong>로 검색</label>
+                            <input name="query" type="text" placeholder="약 이름 또는 성분 등으로 검색해 보세요." value="메티마졸" id="ip_txt" class="input_search">
+                            <input type="submit" value="검색" class="btn_cont_search" id="nameSearchBtn">
+        </form>
+                    </div>
+                    <div class="medicine_search_detail">
+                        <form name="medicineExteriorSearchForm" action="/medicineSearch.naver" method="get"
+                            id="medicineExteriorSearchForm">
+                            <input type="hidden" name="mode" value="exteriorSearch">
+                            <input type="hidden" name="shape" value="">
+                            <input type="hidden" name="color" value="">
+                            <input type="hidden" name="dosageForm" value="">
+                            <input type="hidden" name="divisionLine" value="">
+                            <div class="medicine_shape">
+                                <label for="ip_txt2" class="label_search"><strong>약 모양</strong>으로 검색</label>
+                                <input type="text" name="identifier" value="식별문자 (약의 앞면이나 뒷면의 문자)로 검색해 보세요." placeholder="식별문자 (약의 앞면이나 뒷면의 문자)로 검색해 보세요." id="ip_txt2" class="input_search">
+            </div>
+                                <div class="dsc_mdcn">
+                                    <div class="slide_mdcn">
+                                        <div class="mdcn_shape inner_mdcn" id="slide_shape">
+                                            <div class="item_mdcn on"><a href="javascript:void(0)"
+                                                    class="all">모양<br>전체</a></div>
+                                            <div class="item_mdcn" data-displayname="1"><a href="javascript:void(0)"
+                                                    class="shape"><span>원형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="2"><a href="javascript:void(0)"
+                                                    class="shape2"><span>타원형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="3"><a href="javascript:void(0)"
+                                                    class="shape3"><span>반원형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="4"><a href="javascript:void(0)"
+                                                    class="shape4"><span>삼각형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="5"><a href="javascript:void(0)"
+                                                    class="shape5"><span>사각형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="6"><a href="javascript:void(0)"
+                                                    class="shape6"><span>마름모형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="7"><a href="javascript:void(0)"
+                                                    class="shape7"><span>장방형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="8"><a href="javascript:void(0)"
+                                                    class="shape8"><span>오각형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="9"><a href="javascript:void(0)"
+                                                    class="shape9"><span>육각형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="10"><a href="javascript:void(0)"
+                                                    class="shape10"><span>팔각형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="99"><a href="javascript:void(0)"
+                                                    class="shape11"><span>기타</span></a></div>
+                                        </div>
+                                        <a href="javascript:void(0)"
+                                            class="btn_page type1 prev"><span class="blind">이전</span></a>
+                                        <a href="javascript:void(0)"
+                                            class="btn_page type1 next"><span class="blind">다음</span></a>
+                                    </div>
+                                    <div class="slide_mdcn">
+                                        <div class="mdcn_color inner_mdcn" id="slide_color">
+                                            <div class="item_mdcn on"><a href="javascript:void(0)"
+                                                    class="all">색상<br>전체</a></div>
+                                            <div class="item_mdcn" data-displayname="16384"><a
+                                                    href="javascript:void(0)"><span class="color"></span>하양</a></div>
+                                            <div class="item_mdcn" data-displayname="8"><a
+                                                    href="javascript:void(0)"><span class="color2"></span>노랑</a></div>
+                                            <div class="item_mdcn" data-displayname="512"><a
+                                                    href="javascript:void(0)"><span class="color3"></span>주황</a></div>
+                                            <div class="item_mdcn" data-displayname="32"><a
+                                                    href="javascript:void(0)"><span class="color4"></span>분홍</a></div>
+                                            <div class="item_mdcn" data-displayname="64"><a
+                                                    href="javascript:void(0)"><span class="color5"></span>빨강</a></div>
+                                            <div class="item_mdcn" data-displayname="1"><a
+                                                    href="javascript:void(0)"><span class="color6"></span>갈색</a></div>
+                                            <div class="item_mdcn" data-displayname="128"><a
+                                                    href="javascript:void(0)"><span class="color7"></span>연두</a></div>
+                                            <div class="item_mdcn" data-displayname="2048"><a
+                                                    href="javascript:void(0)"><span class="color8"></span>초록</a></div>
+                                            <div class="item_mdcn" data-displayname="1024"><a
+                                                    href="javascript:void(0)"><span class="color9"></span>청록</a></div>
+                                            <div class="item_mdcn" data-displayname="8196"><a
+                                                    href="javascript:void(0)"><span class="color10"></span>파랑</a></div>
+                                            <div class="item_mdcn" data-displayname="4"><a
+                                                    href="javascript:void(0)"><span class="color11"></span>남색</a></div>
+                                            <div class="item_mdcn" data-displayname="256"><a
+                                                    href="javascript:void(0)"><span class="color12"></span>자주</a></div>
+                                            <div class="item_mdcn" data-displayname="16"><a
+                                                    href="javascript:void(0)"><span class="color13"></span>보라</a></div>
+                                            <div class="item_mdcn" data-displayname="32768"><a
+                                                    href="javascript:void(0)"><span class="color14"></span>회색</a></div>
+                                            <div class="item_mdcn" data-displayname="2"><a
+                                                    href="javascript:void(0)"><span class="color15"></span>검정</a></div>
+                                            <div class="item_mdcn" data-displayname="4096"><a
+                                                    href="javascript:void(0)"><span class="color16"></span>투명</a></div>
+                                        </div>
+                                        <a href="javascript:void(0)"
+                                            class="btn_page type2 prev"><span class="blind">이전</span></a>
+                                        <a href="javascript:void(0)"
+                                            class="btn_page type2 next"><span class="blind">다음</span></a>
+                                    </div>
+                                    <div class="slide_mdcn">
+                                        <div class="mdcn_hoof">
+                                            <div class="item_mdcn on"><a href="javascript:void(0)"
+                                                    class="all">제형<br>전체</a></div>
+                                            <div class="item_mdcn" data-displayname="1"><a href="javascript:void(0)"
+                                                    class="hoof"><span>정제류</span></a></div>
+                                            <div class="item_mdcn" data-displayname="2"><a href="javascript:void(0)"
+                                                    class="hoof2"><span>경질캡슐</span></a></div>
+                                            <div class="item_mdcn" data-displayname="3"><a href="javascript:void(0)"
+                                                    class="hoof3"><span>연질캡슐</span></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slide_mdcn">
+                                        <div class="mdcn_costula">
+                                            <div class="item_mdcn on"><a href="javascript:void(0)"
+                                                    class="all">분할선<br>전체</a></div>
+                                            <div class="item_mdcn" data-displayname="8"><a href="javascript:void(0)"
+                                                    class="costula"><span>없음</span></a></div>
+                                            <div class="item_mdcn" data-displayname="2"><a href="javascript:void(0)"
+                                                    class="costula2"><span>(-)형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="1"><a href="javascript:void(0)"
+                                                    class="costula3"><span>(+)형</span></a></div>
+                                            <div class="item_mdcn" data-displayname="4"><a href="javascript:void(0)"
+                                                    class="costula4"><span>기타</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_area">
+                                    <a href="javascript:void(0);" role="button" class="btn_pill_search"
+                                        id="exteriorSearchBtn">검색</a>
+                                    <a href="javascript:void(0);" role="button" class="btn_reset"
+                                        id="exteriorSearchResetBtn">초기화</a>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+                <div class="list_wrap">
+                    <ul class="content_list">
+                        <li>
+                            <div class="thumb_area">
+                                <div class="thumb id2136942">
+                                    <a href="/entry.naver?docId=2136942&cid=51000&categoryId=51000"
+                                        onclick="nclk(this, 'tml.img', '', '', 1);">
+                                        <span class="mask"></span>
+                                        <img onerror="this.className='listThumbnail'" data-id="id2136942" class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_20%2F20210321235710651_NBVXMRNXN.jpg%2FA11A1310A013001.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" alt="부광메티마졸정">
+                                        <span class="mask"></span>
+                                    </a>
+                                    <a href="#" class="photo_more" data-areaCode="tml">
+                                        <i class="ico"></i><strong>3</strong>
+                                        <span class="blind">개의 이미지 미리보기</span>
+                                    </a>
+                                </div>
+
+                                <div class="ly_image_view id2136942" style="display:none">
+                                    <div class="image_area">
+                                        <a href="/entry.naver?docId=2136942&cid=51000&categoryId=51000"
+                                            onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_20%2F20210321235710651_NBVXMRNXN.jpg%2FA11A1310A013001.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="부광메티마졸정"></a>
+                                            <a href="/entry.naver?docId=2136942&cid=51000&categoryId=51000"
+                                                onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_9%2F20180712041435057_70BSWLAOD.jpg%2FP_8806422006819.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=10" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="부광메티마졸정"></a>
+                                                <a href="/entry.naver?docId=2136942&cid=51000&categoryId=51000"
+                                                    onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_9%2F20180712041435416_ICKZS3B1T.jpg%2FP_8806422006840.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=10" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="부광메티마졸정"></a>
+                                                    <a href="/entry.naver?docId=2136942&cid=51000&categoryId=51000"
+                                                        onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_9%2F20180712041440143_ONMHB0GWJ.jpg%2FP_A11A1310A0130_.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=10" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="부광메티마졸정"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_area">
+                                <div class="subject">
+                                    <strong class="title">
+                            <a href="/entry.naver?docId=2136942&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>부광메티마졸정 [Methimazol Tab. Bukwang]</strong></a>
+
+                                    <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS"
+                                        data-contentsid="2136942" onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                                    </strong>
+                                </div>
+                                <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 흰색의
+                                    정제임. [성분정보] <strong>메티마졸</strong> 5mg [저장방법] 차광기밀용기,실온(1~30℃)보관 [효능효과] 1. 갑상선기능항진증
+                                    2. 아전 갑상선 절제술과 방사선 요오드 요법을 시행하려고 하는 갑상선기능항진증 [용법용량] 1. 성인 : <strong>메티마졸</strong>로서
+                                    1일 초기량을 경증인 경우에는 15mg, 중등도인 경우에는 30-40mg, 중증인 경우에는 60mg을 8시간 간격으로 1일 3회 분할 경구투여한다.
+                                    기능항진이 소실함에 따라 유지용량으로는 1일 5-15mg을 1-2회 분할 투여한다. 2. 소아 : 이 약으로서 1일 초기량은 체중 kg당 0.4mg을
+                                    8시간 간격으로 1일 3회 분할 투여하며, 기능항진이 소실함에 따라 유지량으로는 초기량의 1/2을 투여한다. [사용상 주의사항] 1. 다음 환자에는
+                                    투여하지 말 것. 1) 무과립구증, 백혈구감소증 및 혈소판감소증 환자 2) 이 약에 과민증 환자 3) 수유부 4)
+                                    <strong>메티마졸</strong>(티아마졸) 또는 전구체인 카르비마졸 투여 후</p>
+                                <div class="related v2">
+                                    <div class="iner">
+                                        <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                                        <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="2136942"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                                        </span>
+                                        <span class="u_likeit_blind">좋아요</span>
+                                        <span class="u_likeit_text num _count">{label}</span>
+                                        </a>
+                                        <ul class="u_likeit_layer _faceLayer" role="radiogroup"
+                                            aria-labelledby="u_likeit_title">
+                                            <li class="u_likeit_list useful" role="menuitem">
+                                                <a class="u_likeit_list_button _button" data-type="useful"
+                                                    data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful"
+                                                    role="button" aria-selected="false">
+                                                    <span class="u_likeit_list_name _label">유익해요</span>
+                                                    <span class="u_likeit_list_count _count">0</span>
+                                                </a>
+                                            </li>
+                                            <li class="u_likeit_list want" role="presentation">
+                                                <a class="u_likeit_list_button _button" data-type="want"
+                                                    data-log="RTL.want|RTL.unwant" href="#ratingbutton-want"
+                                                    role="radio" aria-checked="false">
+                                                    <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                                    <span class="u_likeit_list_count _count">0</span>
+                                                </a>
+                                            </li>
+                                            <li class="u_likeit_list quote" role="menuitem">
+                                                <a class="u_likeit_list_button _button" data-type="quote"
+                                                    data-log="RTL.quote|RTL.unquote" href="#ratingbutton-quote"
+                                                    role="radio" aria-checked="false">
+                                                    <span class="u_likeit_list_name _label">담아갈게요</span>
+                                                    <span class="u_likeit_list_count _count">0</span>
+                                                </a>
+                                            </li>
+                                            <li class="u_likeit_list modify" role="presentation">
+                                                <a class="u_likeit_list_button _button" data-type="modify"
+                                                    data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify"
+                                                    role="radio" aria-checked="false">
+                                                    <span class="u_likeit_list_name _label">수정해주세요</span>
+                                                    <span class="u_likeit_list_count _count">0</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </span>
+                                </div>
+                            </div>
+                </div>
+                </li>
+                <li>
+                    <div class="info_area">
+                        <div class="subject">
+                            <strong class="title">
+                            <a href="/entry.naver?docId=2142684&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>한국유나이트메티마졸정(수출용) [KoreaUnited Methimazole Tab.(for export)]</strong></a>
+
+                            <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="2142684"
+                                onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                            </strong>
+                        </div>
+                        <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 백색의 원형정제이다
+                            [저장방법] 기밀용기 [효능효과] 1. 갑상선기능항진증 2. 아전 갑상선 절제술과 방사선 요오드 요법을 시행하려고 하는 갑상선기능항진증 [용법용량] 1. 성인 :
+                            <strong>메티마졸</strong>로서 1일 초기량을 경증인 경우에는 15mg, 중등도인 경우에는 30-40mg, 중증인 경우에는 60mg을 8시간 간격으로 1일
+                            3회 분할 경구투여한다. 기능항진이 소실함에 따라 유지용량으로는 1일 5-15mg을 1-2회 분할 투여한다. 2. 소아 : 이 약으로서 1일 초기량은 체중 kg당
+                            0.4mg을 8시간 간격으로 1일 3회 분할 투여하며, 기능항진이 소실함에 따라 유지량으로는 초기량의 1/2을 투여한다. [사용상 주의사항] 1. 다음 환자에는
+                            투여하지 말 것. 1) 무과립구증, 백혈구감소증 및 혈소판감소증 환자 2) 이 약에 과민증 환자 3) 수유부 4) <strong>메티마졸</strong>(티아마졸)
+                            또는 전구체인 카르비마졸 투여 후 급성 췌장염의 병력이 있는 환자 5) 이 약은 유</p>
+                        <div class="related v2">
+                            <div class="iner">
+                                <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                                <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="2142684"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                                </span>
+                                <span class="u_likeit_blind">좋아요</span>
+                                <span class="u_likeit_text num _count">{label}</span>
+                                </a>
+                                <ul class="u_likeit_layer _faceLayer" role="radiogroup"
+                                    aria-labelledby="u_likeit_title">
+                                    <li class="u_likeit_list useful" role="menuitem">
+                                        <a class="u_likeit_list_button _button" data-type="useful"
+                                            data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                            aria-selected="false">
+                                            <span class="u_likeit_list_name _label">유익해요</span>
+                                            <span class="u_likeit_list_count _count">0</span>
+                                        </a>
+                                    </li>
+                                    <li class="u_likeit_list want" role="presentation">
+                                        <a class="u_likeit_list_button _button" data-type="want"
+                                            data-log="RTL.want|RTL.unwant" href="#ratingbutton-want" role="radio"
+                                            aria-checked="false">
+                                            <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                            <span class="u_likeit_list_count _count">0</span>
+                                        </a>
+                                    </li>
+                                    <li class="u_likeit_list quote" role="menuitem">
+                                        <a class="u_likeit_list_button _button" data-type="quote"
+                                            data-log="RTL.quote|RTL.unquote" href="#ratingbutton-quote" role="radio"
+                                            aria-checked="false">
+                                            <span class="u_likeit_list_name _label">담아갈게요</span>
+                                            <span class="u_likeit_list_count _count">0</span>
+                                        </a>
+                                    </li>
+                                    <li class="u_likeit_list modify" role="presentation">
+                                        <a class="u_likeit_list_button _button" data-type="modify"
+                                            data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                            aria-checked="false">
+                                            <span class="u_likeit_list_name _label">수정해주세요</span>
+                                            <span class="u_likeit_list_count _count">0</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </span>
+                        </div>
+                    </div>
+            </div>
+            </li>
+            <li>
+                <div class="thumb_area">
+                    <div class="thumb id6210025">
+                        <a href="/entry.naver?docId=6210025&cid=51000&categoryId=51000"
+                            onclick="nclk(this, 'tml.img', '', '', 1);">
+                            <span class="mask"></span>
+                            <img onerror="this.className='listThumbnail'" data-id="id6210025" class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_19%2F20210221235503521_EY9JP0WI6.jpg%2F202101210000402.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" alt="부광메티마졸정2.5mg">
+                            <span class="mask"></span>
+                        </a>
+                    </div>
+
+                    <div class="ly_image_view id6210025" style="display:none">
+                        <div class="image_area">
+                            <a href="/entry.naver?docId=6210025&cid=51000&categoryId=51000"
+                                onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_19%2F20210221235503521_EY9JP0WI6.jpg%2F202101210000402.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="부광메티마졸정2.5mg"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_area">
+                    <div class="subject">
+                        <strong class="title">
+                            <a href="/entry.naver?docId=6210025&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>부광메티마졸정2.5mg [Bukwang Methimazole Tab. 2.5mg]</strong></a>
+
+                        <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="6210025"
+                            onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                        </strong>
+                    </div>
+                    <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 흰색의 원형 정제 [성분정보]
+                        <strong>메티마졸</strong> 2.5mg [저장방법] 차광기밀용기, 실온(1~30℃)보관 [효능효과] 1. 갑상선기능항진증 2. 아전 갑상선 절제술과 방사선 요오드
+                        요법을 시행하려고 하는 갑상선기능항진증 [용법용량] 1. 성인 : <strong>메티마졸</strong>로서 1일 초기량을 경증인 경우에는 15mg, 중등도인 경우에는
+                        30-40mg, 중증인 경우에는 60mg을 8시간 간격으로 1일 3회 분할 경구투여한다. 기능항진이 소실함에 따라 유지용량으로는 1일 5-15mg을 1-2회 분할 투여한다.
+                        2. 소아 : 이 약으로서 1일 초기량은 체중 kg당 0.4mg을 8시간 간격으로 1일 3회 분할 투여하며, 기능항진이 소실함에 따라 유지량으로는 초기량의 1/2을
+                        투여한다. [사용상 주의사항] 1. 다음 환자에는 투여하지 말 것. 1) 무과립구증, 백혈구감소증 및 혈소판감소증 환자 2) 이 약에 과민증 환자 3) 수유부 4)
+                        <strong>메티마졸</strong>(티아마졸) 또는 전구체인 카르비마졸</p>
+                    <div class="related v2">
+                        <div class="iner">
+                            <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                            <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="6210025"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                            </span>
+                            <span class="u_likeit_blind">좋아요</span>
+                            <span class="u_likeit_text num _count">{label}</span>
+                            </a>
+                            <ul class="u_likeit_layer _faceLayer" role="radiogroup" aria-labelledby="u_likeit_title">
+                                <li class="u_likeit_list useful" role="menuitem">
+                                    <a class="u_likeit_list_button _button" data-type="useful"
+                                        data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                        aria-selected="false">
+                                        <span class="u_likeit_list_name _label">유익해요</span>
+                                        <span class="u_likeit_list_count _count">0</span>
+                                    </a>
+                                </li>
+                                <li class="u_likeit_list want" role="presentation">
+                                    <a class="u_likeit_list_button _button" data-type="want"
+                                        data-log="RTL.want|RTL.unwant" href="#ratingbutton-want" role="radio"
+                                        aria-checked="false">
+                                        <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                        <span class="u_likeit_list_count _count">0</span>
+                                    </a>
+                                </li>
+                                <li class="u_likeit_list quote" role="menuitem">
+                                    <a class="u_likeit_list_button _button" data-type="quote"
+                                        data-log="RTL.quote|RTL.unquote" href="#ratingbutton-quote" role="radio"
+                                        aria-checked="false">
+                                        <span class="u_likeit_list_name _label">담아갈게요</span>
+                                        <span class="u_likeit_list_count _count">0</span>
+                                    </a>
+                                </li>
+                                <li class="u_likeit_list modify" role="presentation">
+                                    <a class="u_likeit_list_button _button" data-type="modify"
+                                        data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                        aria-checked="false">
+                                        <span class="u_likeit_list_name _label">수정해주세요</span>
+                                        <span class="u_likeit_list_count _count">0</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+        </div>
+        </li>
+        <li>
+            <div class="thumb_area">
+                <div class="thumb id6503353">
+                    <a href="/entry.naver?docId=6503353&cid=51000&categoryId=51000"
+                        onclick="nclk(this, 'tml.img', '', '', 1);">
+                        <span class="mask"></span>
+                        <img onerror="this.className='listThumbnail'" data-id="id6503353" class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_27%2F20230626054954046_MKAI0AXYH.jpg%2F202108310000302.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" alt="메티졸정5mg">
+                        <span class="mask"></span>
+                    </a>
+                    <a href="#" class="photo_more" data-areaCode="tml">
+                        <i class="ico"></i><strong>1</strong>
+                        <span class="blind">개의 이미지 미리보기</span>
+                    </a>
+                </div>
+
+                <div class="ly_image_view id6503353" style="display:none">
+                    <div class="image_area">
+                        <a href="/entry.naver?docId=6503353&cid=51000&categoryId=51000"
+                            onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_27%2F20230626054954046_MKAI0AXYH.jpg%2F202108310000302.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="메티졸정5mg"></a>
+                            <a href="/entry.naver?docId=6503353&cid=51000&categoryId=51000"
+                                onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_27%2F20220904235526616_PFMWFIC6Z.jpg%2FP_2021083100003_.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=10" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="메티졸정5mg"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="info_area">
+                <div class="subject">
+                    <strong class="title">
+                            <a href="/entry.naver?docId=6503353&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>메티졸정5mg [Methizol Tab. 5mg]</strong></a>
+
+                    <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="6503353"
+                        onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                    </strong>
+                </div>
+                <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 흰색의 원형 정제 [성분정보]
+                    <strong>메티마졸</strong> 5mg [저장방법] 차광기밀용기, 실온보관(1~30℃) [효능효과] 1. 갑상선기능항진증 2. 아전 갑상선 절제술과 방사선 요오드 요법을
+                    시행하려고 하는 갑상선기능항진증 [용법용량] 1. 성인 : <strong>메티마졸</strong>로서 1일 초기량을 경증인 경우에는 15mg, 중등도인 경우에는 30-40mg,
+                    중증인 경우에는 60mg을 8시간 간격으로 1일 3회 분할 경구투여한다. 기능항진이 소실함에 따라 유지용량으로는 1일 5-15mg을 1-2회 분할 투여한다. 2. 소아 : 이
+                    약으로서 1일 초기량은 체중 kg당 0.4mg을 8시간 간격으로 1일 3회 분할 투여하며, 기능항진이 소실함에 따라 유지량으로는 초기량의 1/2을 투여한다. [사용상 주의사항]
+                    1. 다음 환자에는 투여하지 말 것. 1) 무과립구증, 백혈구감소증 및 혈소판감소증 환자 2) 이 약에 과민증 환자 3) 수유부 4)
+                    <strong>메티마졸</strong>(티아마졸) 또는 전구체인 카르비마졸 투여</p>
+                <div class="related v2">
+                    <div class="iner">
+                        <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                        <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="6503353"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                        </span>
+                        <span class="u_likeit_blind">좋아요</span>
+                        <span class="u_likeit_text num _count">{label}</span>
+                        </a>
+                        <ul class="u_likeit_layer _faceLayer" role="radiogroup" aria-labelledby="u_likeit_title">
+                            <li class="u_likeit_list useful" role="menuitem">
+                                <a class="u_likeit_list_button _button" data-type="useful"
+                                    data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                    aria-selected="false">
+                                    <span class="u_likeit_list_name _label">유익해요</span>
+                                    <span class="u_likeit_list_count _count">0</span>
+                                </a>
+                            </li>
+                            <li class="u_likeit_list want" role="presentation">
+                                <a class="u_likeit_list_button _button" data-type="want" data-log="RTL.want|RTL.unwant"
+                                    href="#ratingbutton-want" role="radio" aria-checked="false">
+                                    <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                    <span class="u_likeit_list_count _count">0</span>
+                                </a>
+                            </li>
+                            <li class="u_likeit_list quote" role="menuitem">
+                                <a class="u_likeit_list_button _button" data-type="quote"
+                                    data-log="RTL.quote|RTL.unquote" href="#ratingbutton-quote" role="radio"
+                                    aria-checked="false">
+                                    <span class="u_likeit_list_name _label">담아갈게요</span>
+                                    <span class="u_likeit_list_count _count">0</span>
+                                </a>
+                            </li>
+                            <li class="u_likeit_list modify" role="presentation">
+                                <a class="u_likeit_list_button _button" data-type="modify"
+                                    data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                    aria-checked="false">
+                                    <span class="u_likeit_list_name _label">수정해주세요</span>
+                                    <span class="u_likeit_list_count _count">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </span>
+                </div>
+            </div>
+    </div>
+    </li>
+    <li>
+        <div class="thumb_area">
+            <div class="thumb id6503350">
+                <a href="/entry.naver?docId=6503350&cid=51000&categoryId=51000"
+                    onclick="nclk(this, 'tml.img', '', '', 1);">
+                    <span class="mask"></span>
+                    <img onerror="this.className='listThumbnail'" data-id="id6503350" class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_27%2F20230626054952902_78L43W7B0.jpg%2F202108310000202.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" alt="메티졸정2.5mg">
+                    <span class="mask"></span>
+                </a>
+                <a href="#" class="photo_more" data-areaCode="tml">
+                    <i class="ico"></i><strong>1</strong>
+                    <span class="blind">개의 이미지 미리보기</span>
+                </a>
+            </div>
+
+            <div class="ly_image_view id6503350" style="display:none">
+                <div class="image_area">
+                    <a href="/entry.naver?docId=6503350&cid=51000&categoryId=51000"
+                        onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_27%2F20230626054952902_78L43W7B0.jpg%2F202108310000202.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="메티졸정2.5mg"></a>
+                        <a href="/entry.naver?docId=6503350&cid=51000&categoryId=51000"
+                            onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_27%2F20220904235526449_FZRJOTCZ4.jpg%2FP_2021083100002_.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=10" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="메티졸정2.5mg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="info_area">
+            <div class="subject">
+                <strong class="title">
+                            <a href="/entry.naver?docId=6503350&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>메티졸정2.5mg [Methizol Tab. 2.5mg]</strong></a>
+
+                <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="6503350"
+                    onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                </strong>
+            </div>
+            <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 녹색의 원형 정제 [성분정보]
+                <strong>메티마졸</strong> 2.5mg [저장방법] 차광기밀용기, 실온보관(1~30℃) [효능효과] 1. 갑상선기능항진증 2. 아전 갑상선 절제술과 방사선 요오드 요법을
+                시행하려고 하는 갑상선기능항진증 [용법용량] 1. 성인 : <strong>메티마졸</strong>로서 1일 초기량을 경증인 경우에는 15mg, 중등도인 경우에는 30-40mg, 중증인
+                경우에는 60mg을 8시간 간격으로 1일 3회 분할 경구투여한다. 기능항진이 소실함에 따라 유지용량으로는 1일 5-15mg을 1-2회 분할 투여한다. 2. 소아 : 이 약으로서 1일
+                초기량은 체중 kg당 0.4mg을 8시간 간격으로 1일 3회 분할 투여하며, 기능항진이 소실함에 따라 유지량으로는 초기량의 1/2을 투여한다. [사용상 주의사항] 1. 다음 환자에는
+                투여하지 말 것. 1) 무과립구증, 백혈구감소증 및 혈소판감소증 환자 2) 이 약에 과민증 환자 3) 수유부 4) <strong>메티마졸</strong>(티아마졸) 또는 전구체인
+                카르비마졸</p>
+            <div class="related v2">
+                <div class="iner">
+                    <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                    <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="6503350"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                    </span>
+                    <span class="u_likeit_blind">좋아요</span>
+                    <span class="u_likeit_text num _count">{label}</span>
+                    </a>
+                    <ul class="u_likeit_layer _faceLayer" role="radiogroup" aria-labelledby="u_likeit_title">
+                        <li class="u_likeit_list useful" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="useful"
+                                data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                aria-selected="false">
+                                <span class="u_likeit_list_name _label">유익해요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list want" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="want" data-log="RTL.want|RTL.unwant"
+                                href="#ratingbutton-want" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list quote" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="quote" data-log="RTL.quote|RTL.unquote"
+                                href="#ratingbutton-quote" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">담아갈게요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list modify" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="modify"
+                                data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                aria-checked="false">
+                                <span class="u_likeit_list_name _label">수정해주세요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </span>
+            </div>
+        </div>
+        </div>
+    </li>
+    <li>
+        <div class="thumb_area">
+            <div class="thumb id2141290">
+                <a href="/entry.naver?docId=2141290&cid=51000&categoryId=51000"
+                    onclick="nclk(this, 'tml.img', '', '', 1);">
+                    <span class="mask"></span>
+                    <img onerror="this.className='listThumbnail'" data-id="id2141290" class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_2%2F20160623171943711_K2YI89B36.jpg%2FA11ABBBBB127301.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" alt="삼남프로필치오우라실정">
+                    <span class="mask"></span>
+                </a>
+                <a href="#" class="photo_more" data-areaCode="tml">
+                    <i class="ico"></i><strong>1</strong>
+                    <span class="blind">개의 이미지 미리보기</span>
+                </a>
+            </div>
+
+            <div class="ly_image_view id2141290" style="display:none">
+                <div class="image_area">
+                    <a href="/entry.naver?docId=2141290&cid=51000&categoryId=51000"
+                        onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_2%2F20160623171943711_K2YI89B36.jpg%2FA11ABBBBB127301.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="삼남프로필치오우라실정"></a>
+                        <a href="/entry.naver?docId=2141290&cid=51000&categoryId=51000"
+                            onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_9%2F20180712063651642_178BRLV1U.jpg%2FP_A11ABBBBB1273_.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=10" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="삼남프로필치오우라실정"></a>
+                </div>
+            </div>
+        </div>
+        <div class="info_area">
+            <div class="subject">
+                <strong class="title">
+                            <a href="/entry.naver?docId=2141290&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>삼남프로필치오우라실정 [Propylthiouracil Tab. Samnam]</strong></a>
+
+                <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="2141290"
+                    onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                </strong>
+            </div>
+            <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 백색 원형의 정제이다. · 제형 : 나정 · 모양
+                : 원형 · 색상 : 하양 · 분할선 : - · 식별표기 : (앞)PT 50, (뒤)분할선 [성분정보] 프로필티오우라실 50mg [저장방법] 기밀용기, 실온(1～30℃)보관 [효능효과]
+                갑상선기능항진증 [용법용량] 1. 성인 : 초기량으로 프로필티오우라실로서 1일 100-300mg을 3-4회 분할 경구투여하며, 중증에는 1일 400-600mg까지 투여할 수 있다.
+                갑상선기능항진증이 소실되면 1-4주간 점진적으로 감량하여 유지량으로서 1일 25-100mg을 1-2회 분할 투여한다. 2. 소아 : 초기량은 5-9세는 1일 100-200mg을,
+                10-14세는 1일 200-300mg을 1일 2-4회 분할 투여한다. 갑상선기능항진증이 소실되면 1-4주간 점진적으로 감량하여 유지량으로서 1일 50-100mg을 1-2회 분할 투여한다.
+                3. 임부 : 초기량 1일 150-300mg을 3-4회 분할 투여한다. 갑상</p>
+            <div class="related v2">
+                <div class="iner">
+                    <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                    <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="2141290"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                    </span>
+                    <span class="u_likeit_blind">좋아요</span>
+                    <span class="u_likeit_text num _count">{label}</span>
+                    </a>
+                    <ul class="u_likeit_layer _faceLayer" role="radiogroup" aria-labelledby="u_likeit_title">
+                        <li class="u_likeit_list useful" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="useful"
+                                data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                aria-selected="false">
+                                <span class="u_likeit_list_name _label">유익해요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list want" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="want" data-log="RTL.want|RTL.unwant"
+                                href="#ratingbutton-want" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list quote" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="quote" data-log="RTL.quote|RTL.unquote"
+                                href="#ratingbutton-quote" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">담아갈게요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list modify" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="modify"
+                                data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                aria-checked="false">
+                                <span class="u_likeit_list_name _label">수정해주세요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </span>
+            </div>
+        </div>
+        </div>
+    </li>
+    <li>
+        <div class="info_area">
+            <div class="subject">
+                <strong class="title">
+                            <a href="/entry.naver?docId=4394338&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>티우라실정(수출용) [Thiuracil Tab. (for export)]</strong></a>
+
+                <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="4394338"
+                    onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                </strong>
+            </div>
+            <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 흰색의 원형 정제 [성분정보] 프로필티오우라실
+                50mg [저장방법] 기밀용기, 실온(1~30℃)보관 [효능효과] 갑상선기능항진증 [용법용량] 1. 성인 : 초기량으로 프로필티오우라실로서 1일 100~300mg을 3~4회 분할
+                경구투여하며, 중증에는 1일 400~600 mg까지 투여할 수 있다. 갑상선기능항진증이 소실되면 1~4주간 점진적으로 감량하여 유지량으로서 1일 25~100mg을 1~2회 분할 투여한다.
+                2. 소아 : 초기량은 5~9세는 1일 100~200mg을, 10~14세는 1일 200~300 mg을 1일 2~4회 분할 투여한다. 갑상선기능항진증이 소실되면 1~4주간 점진적으로
+                감량하여 유지량으로서 1일 50~100mg을 1~2회 분할 투여한다. 3. 임부 : 초기량 1일 150~300mg을 3~4회 분할 투여한다. 갑상선기능항진증이 소실되면 1~4주간
+                점진적으로 감량해서 유지량으로서 1일 50~100mg을 1~2회 분할 투여한다. 정상</p>
+            <div class="related v2">
+                <div class="iner">
+                    <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                    <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="4394338"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                    </span>
+                    <span class="u_likeit_blind">좋아요</span>
+                    <span class="u_likeit_text num _count">{label}</span>
+                    </a>
+                    <ul class="u_likeit_layer _faceLayer" role="radiogroup" aria-labelledby="u_likeit_title">
+                        <li class="u_likeit_list useful" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="useful"
+                                data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                aria-selected="false">
+                                <span class="u_likeit_list_name _label">유익해요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list want" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="want" data-log="RTL.want|RTL.unwant"
+                                href="#ratingbutton-want" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list quote" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="quote" data-log="RTL.quote|RTL.unquote"
+                                href="#ratingbutton-quote" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">담아갈게요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list modify" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="modify"
+                                data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                aria-checked="false">
+                                <span class="u_likeit_list_name _label">수정해주세요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </span>
+            </div>
+        </div>
+        </div>
+    </li>
+    <li>
+        <div class="info_area">
+            <div class="subject">
+                <strong class="title">
+                            <a href="/entry.naver?docId=5144043&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>로치실정(수출용) [Rothicil Tab.(for export)]</strong></a>
+
+                <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="5144043"
+                    onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                </strong>
+            </div>
+            <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 흰색의 원형 정제 [성분정보] 프로필티오우라실
+                50mg [저장방법] 기밀용기, 실온(1~30℃)보관 [효능효과] 갑상선기능항진증 [용법용량] 1. 성인 : 초기량으로 프로필치오우라실로서 1일 100~300mg을 3~4회 분할
+                경구투여하며, 중증에는 1일 400~600 mg까지 투여할 수 있다. 갑상선기능항진증이 소실되면 1~4주간 점진적으로 감량하여 유지량으로서 1일 25~100mg을 1~2회 분할 투여한다.
+                2. 소아 : 초기량은 5~9세는 1일 100~200mg을, 10~14세는 1일 200~300 mg을 1일 2~4회 분할 투여한다. 갑상선기능항진증이 소실되면 1~4주간 점진적으로
+                감량하여 유지량으로서 1일 50~100mg을 1~2회 분할 투여한다. 3. 임부 : 초기량 1일 150~300mg을 3~4회 분할 투여한다. 갑상선기능항진증이 소실되면 1~4주간
+                점진적으로 감량해서 유지량으로서 1일 50~100mg을 1~2회 분할 투여한다. 정상</p>
+            <div class="related v2">
+                <div class="iner">
+                    <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                    <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="5144043"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                    </span>
+                    <span class="u_likeit_blind">좋아요</span>
+                    <span class="u_likeit_text num _count">{label}</span>
+                    </a>
+                    <ul class="u_likeit_layer _faceLayer" role="radiogroup" aria-labelledby="u_likeit_title">
+                        <li class="u_likeit_list useful" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="useful"
+                                data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                aria-selected="false">
+                                <span class="u_likeit_list_name _label">유익해요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list want" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="want" data-log="RTL.want|RTL.unwant"
+                                href="#ratingbutton-want" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list quote" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="quote" data-log="RTL.quote|RTL.unquote"
+                                href="#ratingbutton-quote" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">담아갈게요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list modify" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="modify"
+                                data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                aria-checked="false">
+                                <span class="u_likeit_list_name _label">수정해주세요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </span>
+            </div>
+        </div>
+        </div>
+    </li>
+    <li>
+        <div class="thumb_area">
+            <div class="thumb id2136945">
+                <a href="/entry.naver?docId=2136945&cid=51000&categoryId=51000"
+                    onclick="nclk(this, 'tml.img', '', '', 1);">
+                    <span class="mask"></span>
+                    <img onerror="this.className='listThumbnail'" data-id="id2136945" class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_20%2F20210803230706072_IZV8CLJ8P.jpg%2FA11A1310A013301.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" alt="안티로이드정">
+                    <span class="mask"></span>
+                </a>
+                <a href="#" class="photo_more" data-areaCode="tml">
+                    <i class="ico"></i><strong>2</strong>
+                    <span class="blind">개의 이미지 미리보기</span>
+                </a>
+            </div>
+
+            <div class="ly_image_view id2136945" style="display:none">
+                <div class="image_area">
+                    <a href="/entry.naver?docId=2136945&cid=51000&categoryId=51000"
+                        onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_20%2F20210803230706072_IZV8CLJ8P.jpg%2FA11A1310A013301.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=17" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="안티로이드정"></a>
+                        <a href="/entry.naver?docId=2136945&cid=51000&categoryId=51000"
+                            onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_9%2F20180712041451543_7DJC7J033.jpg%2FP_8806422014944.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=10" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="안티로이드정"></a>
+                            <a href="/entry.naver?docId=2136945&cid=51000&categoryId=51000"
+                                onclick="nclk(this, 'tml.img', '', '', 1);"><img class="lazyLoadImage" src="https://ssl.pstatic.net/static/terms/terms/img/e.gif" data-src="https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F3323_000_9%2F20180712041452095_TAWRTHJKB.jpg%2FP_A11A1310A0133_.jpg%3Ftype%3Dw450_fst%22&twidth=226&theight=226&opts=10" onerror="this.src='https://ssl.pstatic.net/static/terms/terms/img/noimg.gif';if(this.nextSibling)this.nextSibling.style.display='none';" alt="안티로이드정"></a>
+                </div>
+            </div>
+        </div>
+        <div class="info_area">
+            <div class="subject">
+                <strong class="title">
+                            <a href="/entry.naver?docId=2136945&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>안티로이드정 [Antiroid Tab.]</strong></a>
+
+                <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="2136945"
+                    onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                </strong>
+            </div>
+            <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 흰색의 정제 [성분정보] 프로필티오우라실 50mg
+                [저장방법] 기밀용기 [효능효과] 갑상선기능항진증 [용법용량] 1. 성인 : 초기량으로 프로필티오우라실로서 1일 100-300mg을 3-4회 분할 경구투여하며, 중증에는 1일
+                400-600mg까지 투여할 수 있다. 갑상선기능항진증이 소실되면 1-4주간 점진적으로 감량하여 유지량으로서 1일 25-100mg을 1-2회 분할 투여한다. 2. 소아 : 초기량은
+                5-9세는 1일 100-200mg을, 10-14세는 1일 200-300mg을 1일 2-4회 분할 투여한다. 갑상선기능항진증이 소실되면 1-4주간 점진적으로 감량하여 유지량으로서 1일
+                50-100mg을 1-2회 분할 투여한다. 3. 임부 : 초기량 1일 150-300mg을 3-4회 분할 투여한다. 갑상선기능항진증이 소실되면 1-4주간 점진적으로 감량해서 유지량으로서
+                1일 50-100mg을 1-2회 분할 투여한다. 정상 임신시 갑상선 기능 검사치가 저하</p>
+            <div class="related v2">
+                <div class="iner">
+                    <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                    <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="2136945"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                    </span>
+                    <span class="u_likeit_blind">좋아요</span>
+                    <span class="u_likeit_text num _count">{label}</span>
+                    </a>
+                    <ul class="u_likeit_layer _faceLayer" role="radiogroup" aria-labelledby="u_likeit_title">
+                        <li class="u_likeit_list useful" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="useful"
+                                data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                aria-selected="false">
+                                <span class="u_likeit_list_name _label">유익해요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list want" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="want" data-log="RTL.want|RTL.unwant"
+                                href="#ratingbutton-want" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list quote" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="quote" data-log="RTL.quote|RTL.unquote"
+                                href="#ratingbutton-quote" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">담아갈게요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list modify" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="modify"
+                                data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                aria-checked="false">
+                                <span class="u_likeit_list_name _label">수정해주세요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </span>
+            </div>
+        </div>
+        </div>
+    </li>
+    <li>
+        <div class="info_area">
+            <div class="subject">
+                <strong class="title">
+                            <a href="/entry.naver?docId=3346705&cid=51000&categoryId=51000" onclick="nclk(this, 'tml.termlist', '', '', 1);"><strong>한림프로필티오우라실정(수출용) [Hanlim Propylthiouracil Tab.]</strong></a>
+
+                <a href="#" class="btn_txt __TLIST_PUT" data-servicecode="TERMS" data-contentsid="3346705"
+                    onclick="nclk(this, 'tml.kadd','', '', 1)">담기</a>
+                </strong>
+            </div>
+            <p class="desc __ellipsis" style="overflow:hidden;max-height:66px">[외형정보] · 성상 : 흰색의 정제 [성분정보] 프로필티오우라실 50mg
+                [저장방법] 기밀용기, 실온(1~30℃)보관 [효능효과] 갑상선기능항진증 [용법용량] (경구 : 정제) 1. 성인 : 초기량으로 프로필치오우라실로서 1일 100-300mg을 3-4회 분할
+                경구투여하며, 중증에는 1일 400-600 mg까지 투여할 수 있다. 갑상선기능항진증이 소실되면 1-4주간 점진적으로 감량하여 유지량으로서 1일 25-100mg을 1-2회 분할 투여한다.
+                2. 소아 : 초기량은 5-9세는 1일 100-200mg을, 10-14세는 1일 200-300 mg을 1일 2-4회 분할 투여한다. 갑상선기능항진증이 소실되면 1-4주간 점진적으로
+                감량하여 유지량으로서 1일 50-100mg을 1-2회 분할 투여한다. 3. 임부 : 초기량 1일 150-300mg을 3-4회 분할 투여한다. 갑상선기능항진증이 소실되면 1-4주간
+                점진적으로 감량해서 유지량으로서 1일 50-100mg을 1-2회 분할 투여</p>
+            <div class="related v2">
+                <div class="iner">
+                    <span class="info book"><a href="/list.naver?cid=51000&categoryId=51000" onclick="nclk(this, 'tml.source', '', '', 1);">의약품 사전</a></span>
+
+                    <span class="info">
+                                <div class="_reactionModule u_likeit type_layer" data-sid="ENCYCLOPEDIA" data-cid="3346705"  style="visibility: hidden">
+                                    <a class="u_likeit_button _face" href="#rating" role="button" aria-haspopup="true" data-label="news" aria-pressed="false">
+                                        <span class="u_likeit_icons u_ico _icon">
+                                            <span class="u_likeit_icon __reaction__zeroface" style="z-index: 5;"><span class="u_likeit_blind">0</span></span>
+                    </span>
+                    <span class="u_likeit_blind">좋아요</span>
+                    <span class="u_likeit_text num _count">{label}</span>
+                    </a>
+                    <ul class="u_likeit_layer _faceLayer" role="radiogroup" aria-labelledby="u_likeit_title">
+                        <li class="u_likeit_list useful" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="useful"
+                                data-log="RTL.useful|RTL.unuseful" href="#ratingbutton-useful" role="button"
+                                aria-selected="false">
+                                <span class="u_likeit_list_name _label">유익해요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list want" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="want" data-log="RTL.want|RTL.unwant"
+                                href="#ratingbutton-want" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">더 알고 싶어요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list quote" role="menuitem">
+                            <a class="u_likeit_list_button _button" data-type="quote" data-log="RTL.quote|RTL.unquote"
+                                href="#ratingbutton-quote" role="radio" aria-checked="false">
+                                <span class="u_likeit_list_name _label">담아갈게요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                        <li class="u_likeit_list modify" role="presentation">
+                            <a class="u_likeit_list_button _button" data-type="modify"
+                                data-log="RTL.modify|RTL.unmodify" href="#ratingbutton-modify" role="radio"
+                                aria-checked="false">
+                                <span class="u_likeit_list_name _label">수정해주세요</span>
+                                <span class="u_likeit_list_count _count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </span>
+            </div>
+        </div>
+        </div>
+    </li>
+    </ul>
+    </div>
+    <div id="paginate" class="paginate">
+        <span class="prev disabled"><a href="#" onclick="return false;">이전</a><i class="ico_bar"></i></span>
+        <strong>1</strong>
+        <a href="/medicineSearch.naver?mode=nameSearch&query=%EB%A9%94%ED%8B%B0%EB%A7%88%EC%A1%B8&page=2"
+            onclick="nclk(this, 'pag.paging', '', '2', 1)">2</a>
+        <a href="/medicineSearch.naver?mode=nameSearch&query=%EB%A9%94%ED%8B%B0%EB%A7%88%EC%A1%B8&page=3"
+            onclick="nclk(this, 'pag.paging', '', '3', 1)">3</a>
+        <span class="next"><i class="ico_bar"></i><a href="/medicineSearch.naver?mode=nameSearch&query=%EB%A9%94%ED%8B%B0%EB%A7%88%EC%A1%B8&page=3" onclick="nclk(this, 'pag.next', '', '', 1);">다음</a></span>
+    </div>
+
+    <div class="sns_box">
+        <div class="naver-splugin" data-style="standard" data-url="" data-title="의약품사전" data-me-display="off"
+            title="보내기">
+        </div>
+    </div>
+    </div>
+
+    <div class="aside" role="complementary" id="asideWrap">
+        <div class="section active">
+            <h3 class="section_title">연관 목록</h3>
+            <ul class="section_list">
+                <li class="section_item">
+                    <a href="/list.naver?cid=50871&categoryId=50871"
+                        onclick="nclk(this, 'rrl.source', '', '', 1);">건강백과</a>
+                    <ul class="category_list">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+    <a href="#" id="goto_top" class="goto_top btn_top"
+        onclick="window.scrollTo(0,0);nclk(this, 'bdr.top', '', '', 1);return false"><span class="blind">위로가기</span></a>
+    </div>
+    <hr>
+
+    <div id="footer" role="contentinfo">
+        <div class="dic_wrap" id="dictionaryCategories">
+            <div class="dic_area">
+                <h3 class="dic_title">주제백과</h3>
+                <div class="dic_iner">
+                    <ul class="dic_list">
+                        <li class="dic_item" data-idx="0"><a href="/list.naver?cid=50871&categoryId=50871"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">건강백과</a></li>
+                        <li class="dic_item" data-idx="1"><a href="/list.naver?cid=60195&categoryId=60195"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">수학/과학백과</a></li>
+                        <li class="dic_item" data-idx="2"><a href="/list.naver?cid=44630&categoryId=44630"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">음식백과</a></li>
+                        <li class="dic_item" data-idx="3"><a href="/list.naver?cid=44623&categoryId=44623"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">미술백과</a></li>
+                        <li class="dic_item" data-idx="4"><a href="/list.naver?cid=46675&categoryId=46675"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">동물백과</a></li>
+                        <li class="dic_item" data-idx="5"><a href="/list.naver?cid=46676&categoryId=46676"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">식물백과</a></li>
+                        <li class="dic_item" data-idx="6"><a href="/list.naver?cid=60419&categoryId=60419"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">문학백과</a></li>
+                        <li class="dic_item" data-idx="7"><a href="/list.naver?cid=61278&categoryId=61278"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">역사백과</a></li>
+                        <li class="dic_item line_change" data-idx="8"><a href="/list.naver?cid=60418&categoryId=60418"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">음악백과</a></li>
+                        <li class="dic_item" data-idx="9"><a href="/list.naver?cid=60196&categoryId=60196"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">밀리터리백과</a></li>
+                        <li class="dic_item" data-idx="10"><a href="/list.naver?cid=48677&categoryId=48677"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">비주얼백과</a></li>
+                        <li class="dic_item" data-idx="11"><a href="/list.naver?cid=51613&categoryId=51613"
+                                onclick="nclk(this, 'pct.list', '', '', 1);">동영상백과</a></li>
+                    </ul>
+                </div>
+                <a href="/category.naver" class="btn_more" onclick="nclk(this, 'pct.more', '', '', 1);">더보기</a>
+            </div>
+        </div>
+        <div class="info_wrap">
+            <ul class="info_list">
+                <li><a href="https://policy.naver.com/rules/service.html"
+                        onclick="nclk(this, 'fot.agreement', '', '', 1);" target="_blank">이용약관</a></li>
+                <li><a href="https://help.naver.com/service/6005?lang=ko" onclick="nclk(this, 'fot.cs', '', '', 1);"
+                        target="_blank">지식백과 고객센터</a></li>
+                <li><a href="https://help.naver.com/alias/terms/terms_new1.naver"
+                        onclick="nclk(this, 'fot.modify', '', '', 1);" target="_blank">콘텐츠 수정</a> 및 <a
+                        href="https://help.naver.com/support/service/main.nhn?serviceNo=1000&categoryNo=2705"
+                        onclick="nclk(this, 'fot.report', '', '', 1);" target="_blank">오류신고</a></li>
+                <li><a href="https://www.navercorp.com/ko/company/proposalGuide.nhn"
+                        onclick="nclk(this, 'fot.contact', '', '', 1);" target="_blank">제휴제안</a></li>
+                <li><a href="https://policy.naver.com/rules/privacy.html"
+                        onclick="nclk(this, 'fot.privacy', '', '', 1);" target="_blank"><strong>개인정보처리방침</strong></a>
+                </li>
+                <li><a href="/tlist/guide.naver" onclick="nclk(this, 'fot.policy', '', '', 1);" target="_blank">지식리스트
+                        운영원칙</a></li>
+                <li><a href="https://policy.naver.com/rules/disclaimer.html"
+                        onclick="nclk(this, 'fot.disclaimer', '', '', 1);" target="_blank">책임의 한계와 법적고지</a></li>
+            </ul>
+            <address>
+                <a href="https://www.navercorp.com/" onclick="nclk(this, 'fot.naver', '', '', 1);" target="_blank"
+                    class="logo">NAVER</a>
+                <em>Copyright &copy;</em>
+                <a href="https://www.navercorp.com/" onclick="nclk(this, 'fot.naver', '', '', 1);" target="_blank">NAVER
+                    Corp.</a>
+                <span>All Rights Reserved.</span>
+            </address>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        window.g_ssc = "terms.medicinesearch";
+    </script>
+    <script>
+        var commonData = {
+        autocompleteUrl: 'https://ac.terms.naver.com/ac',
+        urlForEncode: 'https://terms.naver.com/medicineSearch.naver?mode=nameSearch&query=%EB%A9%94%ED%8B%B0%EB%A7%88%EC%A1%B8',
+        lcsObject : {},
+        themelist: {
+            jsApiPc: '/tlist/api/js/tlist.js?230706060548',
+            themelistDomainPc: '',
+            cacheBustingParam: '230706060548',
+            indexType: '',
+            isMobile: false,
+            isThemeList: false,
+            detailTypePage: ''
+        }
+    }
+    </script>
+    <script>
+        var entryData = {
+    isLogin: false,
+    loginUrl: "https://nid.naver.com/nidlogin.login?url=" + encodeURIComponent(document.URL),
+    isImageLibrary: false,
+    entry: {
+      likeDomain: "https://common.like.naver.com",
+      likeScriptUrl: "https://common.like.naver.com/js/reaction/dist/reaction.min.js?230706060548",
+      likeListApi: "https://common.like.naver.com",
+      hasLnbLike: false
+    },
+    themelist: {
+      jsApiPc: "/tlist/api/js/tlist.js?230706060548",
+      themelistDomainPc: "",
+      cacheBustingParam: "230706060548",
+      indexType: "",
+      isMobile: false,
+      isThemeList: false,
+      detailTypePage: ""
+    },
+    serviceId: "TERMS",
+    docId: null,
+    dicName: "null",
+    isPrintPage: false,
+    categoryId: "51000",
+    videoLength: "0",
+    relatedImageLength: "0",
+    diffMeaning: {
+      groupTitle: "null",
+      groupId: "null"
+    },
+    hasAudioInfra: false,
+    audioPartnerKey: "1a72f991",
+    audioPartnerId: "terms-web",
+    soundLength: 0,
+    audioApiDomain: "https://static-audiop.pstatic.net/audiocloud-webplayercore/1.1.1.0/js/audiocloud_webplayer_core.js?230706060548",
+    images: {
+      hasImage: false,
+      thumbnailData: null
+    },
+    naverMap: {
+      hasNaverMap: false,
+      naverMapManagerData: [
+        
+      ]
+    },
+    isNotPreviewPage: true,
+    tkListId: "null",
+    htmlEscapedQuery: '',
+    isVisualDic: false,
+    font: {
+      defaultLevel: "",
+      fontSize: ""
+    },
+    preventContextMenu: false,
+    isTermsExplanation: false,
+    termSource: '<p style="$$margin$$;padding:0;font-size:12px;font-family:Dotum;font-style:normal;font-weight: normal;color:black;"><strong style="padding:0 7px 0 0;color:black;font-weight:bold;font-size:12px;">[네이버 지식백과]</strong> <a href=\"https://terms.naver.com/entry.naver?docId=\"></a></p>',
+    hasNotNewAudioInfra: true,
+    tooltipApi: "https://ssl.pstatic.net/dicimg/tip/tip_pc.js",
+    namlDocType: false,
+    hasRepresentImage: false,
+    denyRightClick: false,
+    isSe3: false,
+    
+    se3Script: "https://ssl.pstatic.net/static.editor/static/viewer/common/se_init.min.js?d=",
+    
+    scrollData: {
+      query: "",
+      subject: "",
+      tab: "",
+      page: 1,
+      totalCount: 0
+    },
+    diffData: {
+      title: "",
+      query: "",
+      delimiter: ""
+    },
+    hasImageThumbnails: false,
+    isMedicalQuery: false,
+    isMusicQuery: false,
+    env: "release",
+    devNamlMinJs: "https://stage-api.naf.naver.com/2.0/js/naml.min.js?v=230706060548",
+    devNamlModuleMinJs: "https://stage-api.naf.naver.com/2.0/js/naml.module.min.js?v=230706060548",
+    stageNamlMinJs: "https://stage-api.naf.naver.com/2.0/js/naml.min.js?v=230706060548",
+    stageNamlModuleMinJs: "https://stage-api.naf.naver.com/2.0/js/naml.module.min.js?v=230706060548",
+    namlMinJs: "https://api.naf.naver.com/2.0/js/naml.min.js?v=230706060548",
+    namlModuleMinJs: "https://api.naf.naver.com/2.0/js/naml.module.min.js?v=230706060548",
+    naverWebPlayer: {
+      rmcVideoInitScript: '',
+      vid: '',
+      inKey: '',
+      videoPlayer: '',
+      width: 0,
+      height: 0
+    },
+    isSummary: false
+  }
+    </script>
+    <script data-main="/js/pc/dist/medicineSearch.min.js?lm=230706060548" src="/js/lib/require.min.js"></script>
+</body>
+
+</html>
