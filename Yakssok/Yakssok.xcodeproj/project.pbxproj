@@ -46,14 +46,15 @@
 		3D5ED60A2A991D8600CAFCEC /* MedicationManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */; };
 		3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */; };
 		5B5EE5132A9A3E5B00402D8E /* PersonAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5122A9A3E5B00402D8E /* PersonAddView.swift */; };
+		5B5EE5152A9A5C7200402D8E /* HowtoTakeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5142A9A5C7200402D8E /* HowtoTakeComponent.swift */; };
+		5B5EE5172A9A5CCB00402D8E /* HowtoTakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */; };
+		5B5EE5192A9A661300402D8E /* Ex+ String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5182A9A661300402D8E /* Ex+ String.swift */; };
+		5B92DD012A9A7A0D0024F07A /* TakeDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92DD002A9A7A0D0024F07A /* TakeDoneView.swift */; };
 		BFF45D022A9A5D890027E72F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D012A9A5D890027E72F /* SearchView.swift */; };
 		BFF45D052A9A678D0027E72F /* CameraReconfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D042A9A678D0027E72F /* CameraReconfirmView.swift */; };
 		BFF45D072A9A67A80027E72F /* ChooseMedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D062A9A67A80027E72F /* ChooseMedicineView.swift */; };
 		BFF45D092A9A684C0027E72F /* SelectMedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D082A9A684C0027E72F /* SelectMedicineView.swift */; };
 		BFF45D0B2A9A71200027E72F /* ConfirmMedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF45D0A2A9A71200027E72F /* ConfirmMedicineView.swift */; };
-		5B5EE5152A9A5C7200402D8E /* HowtoTakeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5142A9A5C7200402D8E /* HowtoTakeComponent.swift */; };
-		5B5EE5172A9A5CCB00402D8E /* HowtoTakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */; };
-		5B5EE5192A9A661300402D8E /* Ex+ String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5182A9A661300402D8E /* Ex+ String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,14 +100,15 @@
 		3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationManagementViewModel.swift; sourceTree = "<group>"; };
 		3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedMedicineModel.swift; sourceTree = "<group>"; };
 		5B5EE5122A9A3E5B00402D8E /* PersonAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAddView.swift; sourceTree = "<group>"; };
+		5B5EE5142A9A5C7200402D8E /* HowtoTakeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowtoTakeComponent.swift; sourceTree = "<group>"; };
+		5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowtoTakeView.swift; sourceTree = "<group>"; };
+		5B5EE5182A9A661300402D8E /* Ex+ String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ String.swift"; sourceTree = "<group>"; };
+		5B92DD002A9A7A0D0024F07A /* TakeDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeDoneView.swift; sourceTree = "<group>"; };
 		BFF45D012A9A5D890027E72F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		BFF45D042A9A678D0027E72F /* CameraReconfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraReconfirmView.swift; sourceTree = "<group>"; };
 		BFF45D062A9A67A80027E72F /* ChooseMedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMedicineView.swift; sourceTree = "<group>"; };
 		BFF45D082A9A684C0027E72F /* SelectMedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMedicineView.swift; sourceTree = "<group>"; };
 		BFF45D0A2A9A71200027E72F /* ConfirmMedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMedicineView.swift; sourceTree = "<group>"; };
-		5B5EE5142A9A5C7200402D8E /* HowtoTakeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowtoTakeComponent.swift; sourceTree = "<group>"; };
-		5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowtoTakeView.swift; sourceTree = "<group>"; };
-		5B5EE5182A9A661300402D8E /* Ex+ String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +188,6 @@
 				BFF45D032A9A670F0027E72F /* Camera */,
 				3D5ED5C42A97962600CAFCEC /* ContentView.swift */,
 				3D5ED5F32A98B97700CAFCEC /* AIPharmacist */,
-				1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailView.swift */,
 				5B5EE5142A9A5C7200402D8E /* HowtoTakeComponent.swift */,
 				5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */,
 				1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailModalView.swift */,
@@ -196,6 +197,7 @@
 				1B3C2D482A99906200CAE5B8 /* SearchMedicationView.swift */,
 				1B070CB92A9A2CDB00D34A98 /* DURAlertView.swift */,
 				1B3914AD2A9A6C7B001115CF /* TestView.swift */,
+				5B92DD002A9A7A0D0024F07A /* TakeDoneView.swift */,
 				1B070CBF2A9A63F700D34A98 /* RecallAlertView.swift */,
 			);
 			path = View;
@@ -383,6 +385,7 @@
 				5B5EE5172A9A5CCB00402D8E /* HowtoTakeView.swift in Sources */,
 				3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */,
 				3D5ED6062A99122400CAFCEC /* MedicineModel.swift in Sources */,
+				5B92DD012A9A7A0D0024F07A /* TakeDoneView.swift in Sources */,
 				3D5ED5F82A98C51600CAFCEC /* MainView.swift in Sources */,
 				BFF45D072A9A67A80027E72F /* ChooseMedicineView.swift in Sources */,
 				3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */,
