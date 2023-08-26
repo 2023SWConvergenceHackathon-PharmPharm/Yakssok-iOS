@@ -32,12 +32,8 @@ struct DURAlertView: View {
             .font(.body1)
             .padding(.bottom, 32)
             ZStack {
-                NavigationLink {
-                    MedicineDetailView(medName: "르바트정")
-                } label: {
-                    MedicationBlock(medicationName: "levart", medicationKorName: "르바트정", medicationTag: ["위궤양", "급성위염"], color: Color.theme.medicine.third20)
-                        .padding(.bottom, 20)
-                }
+                MedicationBlock(medicationName: "levart", medicationKorName: "르바트정", medicationTag: ["위궤양", "급성위염"], color: Color.theme.medicine.third20)
+                    .padding(.bottom, 20)
                 if deleting {
                     Button {
                         withAnimation(.spring()) {
@@ -50,13 +46,9 @@ struct DURAlertView: View {
                 }
             }
             ZStack {
-                NavigationLink {
-                    MedicineDetailView(medName: "노르믹스정")
-                } label: {
-                    MedicationBlock(medicationName: "normix", medicationKorName: "노르믹스정", medicationTag: ["설사"], color: Color.theme.medicine.fourth20)
-                        .grayscale(normixDelete ? 0.5 : 0)
-                        .opacity(normixDelete ? 0.3 : 1)
-                }
+                MedicationBlock(medicationName: "normix", medicationKorName: "노르믹스정", medicationTag: ["설사"], color: Color.theme.medicine.fourth20)
+                    .grayscale(normixDelete ? 0.5 : 0)
+                    .opacity(normixDelete ? 0.3 : 1)
                 if deleting {
                     Button {
                         withAnimation(.spring()) {
@@ -88,7 +80,7 @@ struct DURAlertView: View {
                     }
                 }
                 NavigationLink {
-                    MedicineDetailView(medName: "라벨라정")
+                    RecallAlertView()
                 } label: {
                     Text("넘어갈게요")
                         .padding(.vertical, 18)
@@ -131,42 +123,46 @@ struct MedicationBlock: View {
     let medicationTag: [String]
     let color: Color
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 8)
-                .fill(color)
-                .frame(maxWidth: .infinity)
-                .frame(height: 110)
-                .overlay(RoundedRectangle(cornerRadius: 8)
-                    .strokeBorder(color)
-                )
+        NavigationLink {
+            MedicineDetailView(medName: medicationKorName)
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(color)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 110)
+                    .overlay(RoundedRectangle(cornerRadius: 8)
+                        .strokeBorder(color)
+                    )
 
-            HStack(spacing: 8) {
-                Image(medicationName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 153)
-                    .padding(.leading, 12)
-                    .padding(.vertical, 10)
-                VStack(alignment: .leading, spacing: 0) {
-                    Text(medicationKorName)
-                        .font(.body2SemiBold)
-                        .foregroundColor(Color.theme.gray.gray1)
-                        .padding(.bottom, 12)
-                    HStack {
-                        ForEach(medicationTag, id: \.self) { tag in
-                            MedicationTag(tagName: tag, color: color)
+                HStack(spacing: 8) {
+                    Image(medicationName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 153)
+                        .padding(.leading, 12)
+                        .padding(.vertical, 10)
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text(medicationKorName)
+                            .font(.body2SemiBold)
+                            .foregroundColor(Color.theme.gray.gray1)
+                            .padding(.bottom, 12)
+                        HStack {
+                            ForEach(medicationTag, id: \.self) { tag in
+                                MedicationTag(tagName: tag, color: color)
+                            }
+                            Spacer()
                         }
-                        Spacer()
+                        .padding(.bottom, 12)
+                        HStack(spacing: 3) {
+                            Text("자세히 보기")
+                            Image(systemName: "chevron.right")
+                        }
+                        .font(.caption2)
+                        .foregroundColor(Color.theme.gray.gray2)
                     }
-                    .padding(.bottom, 12)
-                    HStack(spacing: 3) {
-                        Text("자세히 보기")
-                        Image(systemName: "chevron.right")
-                    }
-                    .font(.caption2)
-                    .foregroundColor(Color.theme.gray.gray2)
+                    Spacer()
                 }
-                Spacer()
             }
         }
     }
