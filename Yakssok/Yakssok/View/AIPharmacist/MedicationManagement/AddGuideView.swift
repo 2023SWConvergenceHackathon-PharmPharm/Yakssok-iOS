@@ -34,8 +34,23 @@ struct AddGuideView: View {
 
 extension AddGuideView {
     private var header: some View {
-        Image("")
-            .frame(height: 29)
+        HStack {
+            Image("Logo")
+                .frame(height: 29)
+            
+            Spacer()
+            
+            NavigationLink {
+                Text("검색뷰")
+            } label: {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.theme.primary.main0)
+                    .padding(7)
+                    .background(Color.theme.primary.main40)
+                    .cornerRadius(8)
+            }
+
+        }
     }
     
     private var title: some View {
