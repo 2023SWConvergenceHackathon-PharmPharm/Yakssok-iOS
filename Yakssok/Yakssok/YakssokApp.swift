@@ -12,7 +12,6 @@ struct YakssokApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(medicationManagementViewModel: MedicationManagementViewModel())
-//            TestView()
         }
     }
 }

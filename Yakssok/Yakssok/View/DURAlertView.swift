@@ -32,7 +32,7 @@ struct DURAlertView: View {
             .font(.body1)
             .padding(.bottom, 32)
             ZStack {
-                MedicationBlock(medicationName: "levart", medicationKorName: "르바트정", medicationTag: ["위궤양", "급성위염"], color: Color.theme.medicine.third20)
+                MedicationBlock(medicationName: "levart", medicationKorName: "레바트정", medicationTag: ["위궤양", "급성위염"], color: Color.theme.medicine.third20)
                     .padding(.bottom, 20)
                 if deleting {
                     Button {

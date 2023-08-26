@@ -25,42 +25,39 @@ class Medication: ObservableObject {
     @Published var medicationDetail: [String: String] = [:]
 
     func fetchSearchResults() {
-        let clientId = "6wpJZeMpZr7peQLXETL5"
-        let clientSecret = "6eAMN4y7nY"
-        let urlString = "https://openapi.naver.com/v1/search/encyc.json?query=\(medName)&display=10&start=1"
-        var itemLink = ""
+        // 주어진 URL
+        let urlString = "https://terms.naver.com/medicineSearch.naver?mode=nameSearch&query=\(medName)"
+
+        // URL을 생성하고 URLRequest를 만듭니다.
         if let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) {
             var request = URLRequest(url: url)
-            request.addValue(clientId, forHTTPHeaderField: "X-Naver-Client-Id")
-            request.addValue(clientSecret, forHTTPHeaderField: "X-Naver-Client-Secret")
             request.httpMethod = "GET"
-            URLSession.shared.dataTask(with: request) { data, _, error in
+
+            // URLSession을 사용하여 비동기 네트워크 요청
+            let task = URLSession.shared.dataTask(with: request) { data, _, error in
                 if let error = error {
-                    print("Error: \(error)")
+                    print("Error:", error.localizedDescription)
                     return
                 }
 
+                // Data가 유효한 경우 HTML 파싱 시작
                 if let data = data {
                     do {
-                        let decoder = JSONDecoder()
-                        let searchResponse = try decoder.decode(SearchResponse.self, from: data)
-
-                        if let firstItemLink = searchResponse.items.first?.link {
-                            itemLink = firstItemLink
-                            self.fetchMedicineDetails(detailLink: itemLink)
-                        } else {
-                            print("No items found")
+                        let htmlString = String(data: data, encoding: .utf8)
+                        let doc = try SwiftSoup.parse(htmlString ?? "")
+                        if let linkElement = try doc.select(".info_area a").first() {
+                            let linkHref = try linkElement.attr("href")
+                            self.fetchMedicineDetails(detailLink: "https://terms.naver.com\(linkHref)")
                         }
                     } catch {
-                        print("Decoding error: \(error)")
+                        print("Parsing Error:", error.localizedDescription)
                     }
                 } else {
-                    print("No data received")
-                    return
+                    print("NDFODN")
                 }
-            }.resume()
-        } else {
-            print("error")
+            }
+            // 작업 시작
+            task.resume()
         }
     }
 
@@ -75,7 +72,6 @@ class Medication: ObservableObject {
                     DispatchQueue.main.async {
                         self.medicationDetail["의약품 이름"] = titleText
                     }
-//                    print("Title:", titleText) // "라벨라정20mg"
                 }
 
                 // 효능효과 추출
