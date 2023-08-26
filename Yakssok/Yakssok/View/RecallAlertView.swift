@@ -19,6 +19,8 @@ struct RecallAlertView: View {
             .padding(.horizontal, 24)
             VStack(alignment: .leading, spacing: 3) {
                 Text("NDMA 기준 초과에 따른 사전예방적 조치로 시중")
+                    .foregroundColor(Color.theme.primary.main)
+                    .font(.body1SemiBold)
                 HStack(spacing: 0) {
                     Text("유통품에 대해 영업자 회수 조치")
                         .foregroundColor(Color.theme.primary.main)
@@ -58,11 +60,12 @@ struct RecallAlertView: View {
         }
         .toolbar {
             NavigationLink {
-//                RecallAlertView()
+                //                RecallAlertView()
             } label: {
                 Text("다음")
             }
-        .navigationTitle(Text(""))
+            .navigationTitle(Text(""))
+        }
     }
 }
 

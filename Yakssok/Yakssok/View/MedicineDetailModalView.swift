@@ -8,8 +8,9 @@
 import SwiftSoup
 import SwiftUI
 
-struct MedicineDetailView: View {
+struct MedicineDetailModalView: View {
     @StateObject var medication: Medication = .init()
+    @Binding var isShow: Bool
     var medName: String
 
     var body: some View {
@@ -119,15 +120,30 @@ struct MedicineDetailView: View {
                 }
                 .navigationTitle(Text(""))
             }
+            .frame(height: UIScreen.main.bounds.height * 0.8)
             .scrollIndicators(.hidden)
             .padding(.horizontal, 24)
+            Button {
+                isShow = false
+            } label: {
+                Text("선택하기")
+                    .padding(.vertical, 18.5)
+                    .font(.pretendard(size: 16, .bold))
+            }
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity)
+            .background(Color.theme.primary.main40)
+            .cornerRadius(12)
+            .padding(.horizontal, 24)
+            .shadow(color: .white, radius: 20)
+            .offset(y: 350)
         }
     }
 }
-
-struct MedicineDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        MedicineDetailView(medName: "메티마졸")
-            .environmentObject(Medication())
-    }
-}
+//
+//struct MedicineDetailModalView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MedicineDetailModalView(medName: "메티마졸")
+//            .environmentObject(Medication())
+//    }
+//}
