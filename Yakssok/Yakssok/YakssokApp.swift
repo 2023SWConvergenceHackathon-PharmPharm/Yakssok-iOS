@@ -11,7 +11,8 @@ import SwiftUI
 struct YakssokApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            MapView()
         }
     }
 }
