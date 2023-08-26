@@ -26,7 +26,7 @@ class Medication: ObservableObject {
     func fetchSearchResults() {
         let clientId = "6wpJZeMpZr7peQLXETL5"
         let clientSecret = "6eAMN4y7nY"
-        let query = "메티마졸"
+        let query = "라벨라"
         let urlString = "https://openapi.naver.com/v1/search/encyc.json?query=\(query)&display=10&start=1"
 
         var itemLink = ""
@@ -102,6 +102,11 @@ class Medication: ObservableObject {
                         }
                         medicationDetail["용법용량"] = extractedText
                     }
+                    if let content5Element = try doc.select("h3#TABLE_OF_CONTENT5").first(),
+                       let nextPTag = try content5Element.nextElementSibling() {
+                        let textWithLineBreaks = try nextPTag.html().replacingOccurrences(of: "<br>", with: "\n")
+                        medicationDetail["사용상 주의사항"] = textWithLineBreaks
+                    }
                 }
                 if let startElement = try doc.select("h3#TABLE_OF_CONTENT5").first(),
                    let endElement = try doc.select("h3#TABLE_OF_CONTENT6").first()
@@ -116,7 +121,13 @@ class Medication: ObservableObject {
                         }
                         medicationDetail["용법용량"] = extractedText
                     }
+                    if let content6Element = try doc.select("h3#TABLE_OF_CONTENT6").first(),
+                       let nextPTag = try content6Element.nextElementSibling() {
+                        let textWithLineBreaks = try nextPTag.html().replacingOccurrences(of: "<br>", with: "\n")
+                        medicationDetail["사용상 주의사항"] = textWithLineBreaks
+                    }
                 }
+                
             } catch {
                 print("HTML parsing error: \(error)")
             }
