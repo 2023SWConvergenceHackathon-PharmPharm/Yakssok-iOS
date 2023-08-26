@@ -66,7 +66,7 @@ extension MainView {
             Spacer()
             
             NavigationLink {
-                Text("검색뷰")
+                SearchView()
             } label: {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.theme.primary.main0)
