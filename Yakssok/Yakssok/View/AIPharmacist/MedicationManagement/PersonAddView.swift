@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonAddSheetView: View {
+struct PersonAddView: View {
     @State var name = ""
     @State var isEditing = false
     @State var isDone = false
@@ -89,7 +89,7 @@ struct PersonAddSheetView: View {
         }
     }
 }
-private extension PersonAddSheetView {
+private extension PersonAddView {
     
     @ViewBuilder
     func PersonTypeView() -> some View {
@@ -110,7 +110,7 @@ private extension PersonAddSheetView {
     }
 }
 
-private extension PersonAddSheetView {
+private extension PersonAddView {
     
     enum SelectButton {
         case no
@@ -150,7 +150,7 @@ private extension PersonAddSheetView {
     }
 }
 
-private extension PersonAddSheetView {
+private extension PersonAddView {
     
     @ViewBuilder
     func selectButton(_ isChanged1: Binding<Bool>, _ isChanged2: Binding<Bool>, _ buttonType: SelectButton) -> some View {
@@ -168,6 +168,6 @@ private extension PersonAddSheetView {
 
 struct PersonAddSheet_Previews: PreviewProvider {
     static var previews: some View {
-        PersonAddSheetView()
+        PersonAddView()
     }
 }
