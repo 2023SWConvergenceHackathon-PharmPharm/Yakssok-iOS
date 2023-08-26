@@ -11,6 +11,9 @@
 		1B3C2D412A98E7BE00CAE5B8 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 1B3C2D402A98E7BE00CAE5B8 /* SwiftSoup */; };
 		1B3C2D432A98ED7000CAE5B8 /* empty.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B3C2D422A98ED7000CAE5B8 /* empty.html */; };
 		1B3C2D472A98F4A400CAE5B8 /* MedicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3C2D462A98F4A400CAE5B8 /* MedicationModel.swift */; };
+		3D377D4C2A9951D400FEA657 /* Group 64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D377D4B2A9951D400FEA657 /* Group 64.png */; };
+		3D377D4F2A9952CB00FEA657 /* ChatBotMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D377D4E2A9952CB00FEA657 /* ChatBotMainView.swift */; };
+		3D377D512A99B45F00FEA657 /* InChatCharacter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D377D502A99B45F00FEA657 /* InChatCharacter.png */; };
 		3D5ED5C32A97962600CAFCEC /* YakssokApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5C22A97962600CAFCEC /* YakssokApp.swift */; };
 		3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED5C42A97962600CAFCEC /* ContentView.swift */; };
 		3D5ED5C72A97962600CAFCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5ED5C62A97962600CAFCEC /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailView.swift; sourceTree = "<group>"; };
 		1B3C2D422A98ED7000CAE5B8 /* empty.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = empty.html; sourceTree = "<group>"; };
 		1B3C2D462A98F4A400CAE5B8 /* MedicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationModel.swift; sourceTree = "<group>"; };
+		3D377D4B2A9951D400FEA657 /* Group 64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 64.png"; sourceTree = "<group>"; };
+		3D377D4E2A9952CB00FEA657 /* ChatBotMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotMainView.swift; sourceTree = "<group>"; };
+		3D377D502A99B45F00FEA657 /* InChatCharacter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InChatCharacter.png; sourceTree = "<group>"; };
 		3D5ED5BF2A97962600CAFCEC /* Yakssok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yakssok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D5ED5C22A97962600CAFCEC /* YakssokApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YakssokApp.swift; sourceTree = "<group>"; };
 		3D5ED5C42A97962600CAFCEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D377D4A2A9951B600FEA657 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3D377D502A99B45F00FEA657 /* InChatCharacter.png */,
+				3D377D4B2A9951D400FEA657 /* Group 64.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3D377D4D2A9952B700FEA657 /* ChatBotView */ = {
+			isa = PBXGroup;
+			children = (
+				3D377D4E2A9952CB00FEA657 /* ChatBotMainView.swift */,
+			);
+			path = ChatBotView;
+			sourceTree = "<group>";
+		};
 		3D5ED5B62A97962500CAFCEC = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +178,7 @@
 			children = (
 				3D5ED5EE2A97ACA700CAFCEC /* Info.plist */,
 				3D5ED5DF2A97A36100CAFCEC /* Font */,
+				3D377D4A2A9951B600FEA657 /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -189,6 +213,7 @@
 		3D5ED5F42A98B9C000CAFCEC /* MedicationManagement */ = {
 			isa = PBXGroup;
 			children = (
+				3D377D4D2A9952B700FEA657 /* ChatBotView */,
 				3D5ED5F52A98BA2300CAFCEC /* AddGuideView.swift */,
 				3D5ED5F72A98C51600CAFCEC /* MainView.swift */,
 				3D5ED5F92A98CAE800CAFCEC /* DateCalendarView.swift */,
@@ -265,6 +290,8 @@
 			files = (
 				3D5ED5CA2A97962600CAFCEC /* Preview Assets.xcassets in Resources */,
 				3D5ED5EC2A97AC0E00CAFCEC /* Pretendard-Bold.otf in Resources */,
+				3D377D512A99B45F00FEA657 /* InChatCharacter.png in Resources */,
+				3D377D4C2A9951D400FEA657 /* Group 64.png in Resources */,
 				3D5ED5ED2A97AC0E00CAFCEC /* Pretendard-SemiBold.otf in Resources */,
 				3D5ED5EB2A97AC0E00CAFCEC /* Pretendard-Regular.otf in Resources */,
 				1B3C2D432A98ED7000CAE5B8 /* empty.html in Resources */,
@@ -285,6 +312,7 @@
 				3D5ED5F82A98C51600CAFCEC /* MainView.swift in Sources */,
 				3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */,
 				3D5ED5F62A98BA2300CAFCEC /* AddGuideView.swift in Sources */,
+				3D377D4F2A9952CB00FEA657 /* ChatBotMainView.swift in Sources */,
 				3D5ED5FE2A98FA7700CAFCEC /* MedicineGroupRow.swift in Sources */,
 				3D5ED6022A99007500CAFCEC /* Ex+ View.swift in Sources */,
 				3D5ED6082A99123500CAFCEC /* MedicineGroupModel.swift in Sources */,
@@ -425,7 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yakssok/Preview Content\"";
-				DEVELOPMENT_TEAM = Q6S8GWB6BP;
+				DEVELOPMENT_TEAM = G7X65ZSJ3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yakssok/Resources/Info.plist;
@@ -456,7 +484,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yakssok/Preview Content\"";
-				DEVELOPMENT_TEAM = Q6S8GWB6BP;
+				DEVELOPMENT_TEAM = G7X65ZSJ3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yakssok/Resources/Info.plist;
