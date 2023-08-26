@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B070CB62A99D30900D34A98 /* SearchMedicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B070CB52A99D30900D34A98 /* SearchMedicationModel.swift */; };
+		1B070CBA2A9A2CDB00D34A98 /* DURAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B070CB92A9A2CDB00D34A98 /* DURAlertView.swift */; };
+		1B070CBC2A9A45AB00D34A98 /* met.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B070CBB2A9A45AB00D34A98 /* met.html */; };
+		1B070CC02A9A63F700D34A98 /* RecallAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B070CBF2A9A63F700D34A98 /* RecallAlertView.swift */; };
 		1B3C2D3E2A98BE4A00CAE5B8 /* MedicineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailView.swift */; };
 		1B3C2D412A98E7BE00CAE5B8 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 1B3C2D402A98E7BE00CAE5B8 /* SwiftSoup */; };
 		1B3C2D432A98ED7000CAE5B8 /* empty.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B3C2D422A98ED7000CAE5B8 /* empty.html */; };
 		1B3C2D472A98F4A400CAE5B8 /* MedicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3C2D462A98F4A400CAE5B8 /* MedicationModel.swift */; };
+		1B3C2D492A99906200CAE5B8 /* SearchMedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3C2D482A99906200CAE5B8 /* SearchMedicationView.swift */; };
 		3D377D4C2A9951D400FEA657 /* Group 64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D377D4B2A9951D400FEA657 /* Group 64.png */; };
 		3D377D4F2A9952CB00FEA657 /* ChatBotMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D377D4E2A9952CB00FEA657 /* ChatBotMainView.swift */; };
 		3D377D512A99B45F00FEA657 /* InChatCharacter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D377D502A99B45F00FEA657 /* InChatCharacter.png */; };
@@ -46,9 +51,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B070CB52A99D30900D34A98 /* SearchMedicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMedicationModel.swift; sourceTree = "<group>"; };
+		1B070CB92A9A2CDB00D34A98 /* DURAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DURAlertView.swift; sourceTree = "<group>"; };
+		1B070CBB2A9A45AB00D34A98 /* met.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = met.html; sourceTree = "<group>"; };
+		1B070CBF2A9A63F700D34A98 /* RecallAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallAlertView.swift; sourceTree = "<group>"; };
 		1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailView.swift; sourceTree = "<group>"; };
 		1B3C2D422A98ED7000CAE5B8 /* empty.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = empty.html; sourceTree = "<group>"; };
 		1B3C2D462A98F4A400CAE5B8 /* MedicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationModel.swift; sourceTree = "<group>"; };
+		1B3C2D482A99906200CAE5B8 /* SearchMedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMedicationView.swift; sourceTree = "<group>"; };
 		3D377D4B2A9951D400FEA657 /* Group 64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 64.png"; sourceTree = "<group>"; };
 		3D377D4E2A9952CB00FEA657 /* ChatBotMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotMainView.swift; sourceTree = "<group>"; };
 		3D377D502A99B45F00FEA657 /* InChatCharacter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InChatCharacter.png; sourceTree = "<group>"; };
@@ -166,6 +176,10 @@
 				3D5ED5F32A98B97700CAFCEC /* AIPharmacist */,
 				1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailView.swift */,
 				1B3C2D422A98ED7000CAE5B8 /* empty.html */,
+				1B070CBB2A9A45AB00D34A98 /* met.html */,
+				1B3C2D482A99906200CAE5B8 /* SearchMedicationView.swift */,
+				1B070CB92A9A2CDB00D34A98 /* DURAlertView.swift */,
+				1B070CBF2A9A63F700D34A98 /* RecallAlertView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +192,7 @@
 				3D5ED6072A99123500CAFCEC /* MedicineGroupModel.swift */,
 				3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */,
 				1B3C2D462A98F4A400CAE5B8 /* MedicationModel.swift */,
+				1B070CB52A99D30900D34A98 /* SearchMedicationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +337,7 @@
 			files = (
 				3D3C14982A9A41E50048CB27 /* Group 66.png in Resources */,
 				3D5ED5CA2A97962600CAFCEC /* Preview Assets.xcassets in Resources */,
+				1B070CBC2A9A45AB00D34A98 /* met.html in Resources */,
 				3D5ED5EC2A97AC0E00CAFCEC /* Pretendard-Bold.otf in Resources */,
 				3D377D512A99B45F00FEA657 /* InChatCharacter.png in Resources */,
 				3D377D4C2A9951D400FEA657 /* Group 64.png in Resources */,
@@ -341,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B070CBA2A9A2CDB00D34A98 /* DURAlertView.swift in Sources */,
 				3D5ED5E12A97A38E00CAFCEC /* Ex+ Font.swift in Sources */,
 				3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */,
 				3D5ED6062A99122400CAFCEC /* MedicineModel.swift in Sources */,
@@ -359,11 +376,14 @@
 				BFF45D052A9A678D0027E72F /* CameraReconfirmView.swift in Sources */,
 				3D5ED60A2A991D8600CAFCEC /* MedicationManagementViewModel.swift in Sources */,
 				3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */,
+				1B3C2D492A99906200CAE5B8 /* SearchMedicationView.swift in Sources */,
 				3D5ED6042A990E0500CAFCEC /* Ex+ Transition.swift in Sources */,
 				3D5ED5FC2A98D2B600CAFCEC /* DateComponent.swift in Sources */,
 				5B5EE5132A9A3E5B00402D8E /* PersonAddView.swift in Sources */,
 				1B3C2D472A98F4A400CAE5B8 /* MedicationModel.swift in Sources */,
 				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
+				1B070CB62A99D30900D34A98 /* SearchMedicationModel.swift in Sources */,
+				1B070CC02A9A63F700D34A98 /* RecallAlertView.swift in Sources */,
 				1B3C2D3E2A98BE4A00CAE5B8 /* MedicineDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,14 +21,13 @@ struct Item: Codable {
 }
 
 class Medication: ObservableObject {
+    @Published var medName: String = ""
     @Published var medicationDetail: [String: String] = [:]
 
     func fetchSearchResults() {
         let clientId = "6wpJZeMpZr7peQLXETL5"
         let clientSecret = "6eAMN4y7nY"
-        let query = "라벨라"
-        let urlString = "https://openapi.naver.com/v1/search/encyc.json?query=\(query)&display=10&start=1"
-
+        let urlString = "https://openapi.naver.com/v1/search/encyc.json?query=\(medName)&display=10&start=1"
         var itemLink = ""
         if let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) {
             var request = URLRequest(url: url)
@@ -71,6 +70,14 @@ class Medication: ObservableObject {
                 let html = try String(contentsOf: url)
                 let doc = try SwiftSoup.parse(html)
 
+                if let titleElement = try doc.select("title").first() {
+                    let titleText = try titleElement.text()
+                    DispatchQueue.main.async {
+                        self.medicationDetail["의약품 이름"] = titleText
+                    }
+//                    print("Title:", titleText) // "라벨라정20mg"
+                }
+
                 // 효능효과 추출
                 if let element = try doc.select("meta[property=og:description]").first() {
                     let description = try element.attr("content")
@@ -80,7 +87,9 @@ class Medication: ObservableObject {
                 // 이미지 링크 추출
                 if let imgElement = try doc.select("img[origin_src]").first() {
                     let originSrc = try imgElement.attr("origin_src")
-                    medicationDetail["medImage"] = originSrc
+                    DispatchQueue.main.async {
+                        self.medicationDetail["medImage"] = originSrc
+                    }
                 }
 
                 // 세부사항 추출
@@ -100,12 +109,17 @@ class Medication: ObservableObject {
                             extractedText += try currentElement!.text() + "\n"
                             currentElement = try currentElement?.nextElementSibling()
                         }
-                        medicationDetail["용법용량"] = extractedText
+                        DispatchQueue.main.async {
+                            self.medicationDetail["용법용량"] = extractedText
+                        }
                     }
                     if let content5Element = try doc.select("h3#TABLE_OF_CONTENT5").first(),
-                       let nextPTag = try content5Element.nextElementSibling() {
+                       let nextPTag = try content5Element.nextElementSibling()
+                    {
                         let textWithLineBreaks = try nextPTag.html().replacingOccurrences(of: "<br>", with: "\n")
-                        medicationDetail["사용상 주의사항"] = textWithLineBreaks
+                        DispatchQueue.main.async {
+                            self.medicationDetail["사용상 주의사항"] = textWithLineBreaks
+                        }
                     }
                 }
                 if let startElement = try doc.select("h3#TABLE_OF_CONTENT5").first(),
@@ -119,15 +133,20 @@ class Medication: ObservableObject {
                             extractedText += try currentElement!.text() + "\n"
                             currentElement = try currentElement?.nextElementSibling()
                         }
-                        medicationDetail["용법용량"] = extractedText
+                        DispatchQueue.main.async {
+                            self.medicationDetail["용법용량"] = extractedText
+                        }
                     }
                     if let content6Element = try doc.select("h3#TABLE_OF_CONTENT6").first(),
-                       let nextPTag = try content6Element.nextElementSibling() {
+                       let nextPTag = try content6Element.nextElementSibling()
+                    {
                         let textWithLineBreaks = try nextPTag.html().replacingOccurrences(of: "<br>", with: "\n")
-                        medicationDetail["사용상 주의사항"] = textWithLineBreaks
+                        DispatchQueue.main.async {
+                            self.medicationDetail["사용상 주의사항"] = textWithLineBreaks
+                        }
                     }
                 }
-                
+
             } catch {
                 print("HTML parsing error: \(error)")
             }
@@ -140,7 +159,9 @@ class Medication: ObservableObject {
            let classificationEndRange = description.range(of: "구분")
         {
             let classification = description[classificationRange.upperBound ..< classificationEndRange.lowerBound].trimmingCharacters(in: .whitespacesAndNewlines)
-            medicationDetail["식약처 분류"] = classification
+            DispatchQueue.main.async {
+                self.medicationDetail["식약처 분류"] = classification
+            }
         }
 
         // 구분 추출
@@ -148,7 +169,9 @@ class Medication: ObservableObject {
            let manufacturerRange = description.range(of: "제조(수입) 업체명")
         {
             let type = description[typeRange.upperBound ..< manufacturerRange.lowerBound].trimmingCharacters(in: .whitespacesAndNewlines)
-            medicationDetail["구분"] = type
+            DispatchQueue.main.async {
+                self.medicationDetail["구분"] = type
+            }
         }
 
         // 제조(수입) 업체명 추출
@@ -156,7 +179,9 @@ class Medication: ObservableObject {
            let importTypeRange = description.range(of: "제조·수입 구분")
         {
             let manufacturer = description[manufacturerRange.upperBound ..< importTypeRange.lowerBound].trimmingCharacters(in: .whitespacesAndNewlines)
-            medicationDetail["제조(수입) 업체명"] = manufacturer
+            DispatchQueue.main.async {
+                self.medicationDetail["제조(수입) 업체명"] = manufacturer
+            }
         }
 
         // 제조·수입 구분 추출
@@ -164,7 +189,9 @@ class Medication: ObservableObject {
            let insuranceCodeRange = description.range(of: "보험코드")
         {
             let importType = description[importTypeRange.upperBound ..< insuranceCodeRange.lowerBound].trimmingCharacters(in: .whitespacesAndNewlines)
-            medicationDetail["제조·수입 구분"] = importType
+            DispatchQueue.main.async {
+                self.medicationDetail["제조·수입 구분"] = importType
+            }
         }
     }
 
@@ -174,7 +201,9 @@ class Medication: ObservableObject {
         {
             let extractedText = description[startIndex ..< endIndex].trimmingCharacters(in: .whitespacesAndNewlines)
             let processedText = extractedText.split(separator: " - ").map { $0 }.joined(separator: ", ").split(separator: "- ").map { $0 }.joined()
-            medicationDetail["효능효과"] = extractAndPrintItems(from: processedText)
+            DispatchQueue.main.async {
+                self.medicationDetail["효능효과"] = self.extractAndPrintItems(from: processedText)
+            }
         }
     }
 
