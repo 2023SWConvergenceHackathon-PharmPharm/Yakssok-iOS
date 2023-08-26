@@ -32,10 +32,10 @@ struct RecallAlertView: View {
             .font(.body1)
             .padding(.bottom, 32)
             .padding(.horizontal, 24)
-
+            
             MedicationBlock(medicationName: "labela", medicationKorName: "라벨라정", medicationTag: ["위궤양", "십이지장궤양"], color: Color.theme.medicine.second20)
                 .padding(.horizontal, 24)
-
+            
             DividingRectangle()
                 .padding(.vertical, 28)
             Text("업체에 전화해서 리콜받을 수 있어요")
