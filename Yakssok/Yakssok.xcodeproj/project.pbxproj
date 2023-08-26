@@ -47,6 +47,9 @@
 		3D5ED60A2A991D8600CAFCEC /* MedicationManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */; };
 		3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */; };
 		5B5EE5132A9A3E5B00402D8E /* PersonAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5122A9A3E5B00402D8E /* PersonAddView.swift */; };
+		5B5EE5152A9A5C7200402D8E /* HowtoTakeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5142A9A5C7200402D8E /* HowtoTakeComponent.swift */; };
+		5B5EE5172A9A5CCB00402D8E /* HowtoTakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */; };
+		5B5EE5192A9A661300402D8E /* Ex+ String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5182A9A661300402D8E /* Ex+ String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +96,9 @@
 		3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationManagementViewModel.swift; sourceTree = "<group>"; };
 		3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedMedicineModel.swift; sourceTree = "<group>"; };
 		5B5EE5122A9A3E5B00402D8E /* PersonAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAddView.swift; sourceTree = "<group>"; };
+		5B5EE5142A9A5C7200402D8E /* HowtoTakeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowtoTakeComponent.swift; sourceTree = "<group>"; };
+		5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowtoTakeView.swift; sourceTree = "<group>"; };
+		5B5EE5182A9A661300402D8E /* Ex+ String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+ String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,9 @@
 			children = (
 				3D5ED5C42A97962600CAFCEC /* ContentView.swift */,
 				3D5ED5F32A98B97700CAFCEC /* AIPharmacist */,
+				1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailView.swift */,
+				5B5EE5142A9A5C7200402D8E /* HowtoTakeComponent.swift */,
+				5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */,
 				1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailModalView.swift */,
 				1B3914AF2A9A70E8001115CF /* MedicineDetailView.swift */,
 				1B3C2D422A98ED7000CAE5B8 /* empty.html */,
@@ -202,6 +211,7 @@
 			children = (
 				3D5ED5D32A979C2E00CAFCEC /* Ex+ Color.swift */,
 				3D5ED5E02A97A38E00CAFCEC /* Ex+ Font.swift */,
+				5B5EE5182A9A661300402D8E /* Ex+ String.swift */,
 				3D5ED6012A99007500CAFCEC /* Ex+ View.swift */,
 				3D5ED6032A990E0400CAFCEC /* Ex+ Transition.swift */,
 			);
@@ -349,10 +359,13 @@
 				1B070CBA2A9A2CDB00D34A98 /* DURAlertView.swift in Sources */,
 				1B3914AE2A9A6C7B001115CF /* TestView.swift in Sources */,
 				3D5ED5E12A97A38E00CAFCEC /* Ex+ Font.swift in Sources */,
+				5B5EE5152A9A5C7200402D8E /* HowtoTakeComponent.swift in Sources */,
+				5B5EE5172A9A5CCB00402D8E /* HowtoTakeView.swift in Sources */,
 				3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */,
 				3D5ED6062A99122400CAFCEC /* MedicineModel.swift in Sources */,
 				3D5ED5F82A98C51600CAFCEC /* MainView.swift in Sources */,
 				3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */,
+				5B5EE5192A9A661300402D8E /* Ex+ String.swift in Sources */,
 				3D5ED5F62A98BA2300CAFCEC /* AddGuideView.swift in Sources */,
 				3D377D4F2A9952CB00FEA657 /* ChatBotMainView.swift in Sources */,
 				3D5ED5FE2A98FA7700CAFCEC /* MedicineGroupRow.swift in Sources */,
