@@ -38,6 +38,7 @@
 		3D5ED6082A99123500CAFCEC /* MedicineGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6072A99123500CAFCEC /* MedicineGroupModel.swift */; };
 		3D5ED60A2A991D8600CAFCEC /* MedicationManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */; };
 		3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */; };
+		5B5EE5132A9A3E5B00402D8E /* PersonAddSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EE5122A9A3E5B00402D8E /* PersonAddSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		3D5ED6072A99123500CAFCEC /* MedicineGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineGroupModel.swift; sourceTree = "<group>"; };
 		3D5ED6092A991D8600CAFCEC /* MedicationManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationManagementViewModel.swift; sourceTree = "<group>"; };
 		3D5ED60B2A991E4F00CAFCEC /* ManagedMedicineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedMedicineModel.swift; sourceTree = "<group>"; };
+		5B5EE5122A9A3E5B00402D8E /* PersonAddSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAddSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				3D5ED5F72A98C51600CAFCEC /* MainView.swift */,
 				3D5ED5F92A98CAE800CAFCEC /* DateCalendarView.swift */,
 				3D5ED5FB2A98D2B600CAFCEC /* DateComponent.swift */,
+				5B5EE5122A9A3E5B00402D8E /* PersonAddSheetView.swift */,
 				3D5ED5FD2A98FA7700CAFCEC /* MedicineGroupRow.swift */,
 				3D5ED5FF2A98FC3200CAFCEC /* MedicineRow.swift */,
 			);
@@ -334,6 +337,7 @@
 				3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */,
 				3D5ED6042A990E0500CAFCEC /* Ex+ Transition.swift in Sources */,
 				3D5ED5FC2A98D2B600CAFCEC /* DateComponent.swift in Sources */,
+				5B5EE5132A9A3E5B00402D8E /* PersonAddSheetView.swift in Sources */,
 				1B3C2D472A98F4A400CAE5B8 /* MedicationModel.swift in Sources */,
 				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
 				1B3C2D3E2A98BE4A00CAE5B8 /* MedicineDetailView.swift in Sources */,
@@ -465,7 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yakssok/Preview Content\"";
-				DEVELOPMENT_TEAM = G7X65ZSJ3J;
+				DEVELOPMENT_TEAM = 5Z238234D5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yakssok/Resources/Info.plist;
@@ -480,7 +484,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = seunggyun.Yakssok;
+				PRODUCT_BUNDLE_IDENTIFIER = newyork.Yakssok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -496,7 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yakssok/Preview Content\"";
-				DEVELOPMENT_TEAM = G7X65ZSJ3J;
+				DEVELOPMENT_TEAM = 5Z238234D5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yakssok/Resources/Info.plist;
@@ -511,7 +515,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = seunggyun.Yakssok;
+				PRODUCT_BUNDLE_IDENTIFIER = newyork.Yakssok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
