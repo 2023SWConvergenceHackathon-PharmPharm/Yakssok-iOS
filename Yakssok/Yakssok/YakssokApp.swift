@@ -15,7 +15,9 @@ struct YakssokApp: App {
 //            MedicineDetailView(medName: "메티마졸")
 //                .environmentObject(Medication())
 //            DURAlertView()
-            TestView()
+            ContentView(medicationManagementViewModel: MedicationManagementViewModel())
+//            MedicineDetailView()
+//                .environmentObject(Medication())
         }
     }
 }
