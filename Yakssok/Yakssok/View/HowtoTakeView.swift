@@ -15,45 +15,44 @@ struct HowtoTakeView: View {
     @State var isDone = false
     @State var isSelect1 = false
     @State var isSelect2 = false
-    
+
     let leftButton = "chevron.left"
-    let rightButton = "다음"
+    @State var rightButton = "다음"
     let margin = 24.0
-    
+
     var body: some View {
-        NavigationView {
-            VStack {
-                if !isDone {
-                    HowtoTakeCheckView()
-                } else {
-                    HowtoTakeDoneView()
-                }
+        VStack {
+            if !isDone {
+                HowtoTakeCheckView()
+            } else {
+                HowtoTakeDoneView()
             }
-            .padding(.top, 60)
-            .padding(.horizontal, margin)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        isDone = false
-                    } label: {
-                        Image(systemName: leftButton)
-                            .foregroundColor(ColorTheme().gray.black)
-                    }
+        }
+        .padding(.top, 60)
+        .padding(.horizontal, margin)
+        .toolbar {
+//            ToolbarItem(placement: .navigationBarLeading) {
+//                Button {
+//                    isDone = false
+//                } label: {
+//                    Image(systemName: leftButton)
+//                        .foregroundColor(ColorTheme().gray.black)
+//                }
+//            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    isDone = true
+                    self.rightButton = ""
+                } label: {
+                    Text(rightButton)
+                        .font(.headlineSemiBold)
+                        .foregroundColor(handlerightButtonColor())
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        isDone = true
-                    } label: {
-                        Text(rightButton)
-                            .font(.headlineSemiBold)
-                            .foregroundColor(handlerightButtonColor())
-                    }
-                    .disabled(time.isEmpty || day.isEmpty || (isSelect1 == false) || (isSelect2 == false))
-                }
+                .disabled(time.isEmpty || day.isEmpty || (isSelect1 == false) || (isSelect2 == false))
             }
         }
     }
-    
+
     func handlerightButtonColor() -> Color {
         if time.isEmpty || day.isEmpty || (isSelect1 == false) || (isSelect2 == false) {
             return ColorTheme().gray.gray4
@@ -64,7 +63,6 @@ struct HowtoTakeView: View {
 }
 
 private extension HowtoTakeView {
-    
     @ViewBuilder
     func HowtoTakeCheckView() -> some View {
         VStack(alignment: .leading, spacing: 45) {
@@ -77,7 +75,6 @@ private extension HowtoTakeView {
 }
 
 private extension HowtoTakeView {
-    
     @ViewBuilder
     func HowtoTakeDoneView() -> some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -99,12 +96,9 @@ private extension HowtoTakeView {
 }
 
 private extension HowtoTakeView {
-    
     @ViewBuilder
     func ConfirmButton() -> some View {
-        Button {
-            
-        } label: {
+        Button {} label: {
             Text("확인")
                 .font(.body1SemiBold)
                 .foregroundColor(ColorTheme().background.white)
@@ -114,16 +108,12 @@ private extension HowtoTakeView {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(ColorTheme().primary.main40)
                 )
-                
         }
-        
     }
 }
-
 
 struct HowtoTakeSetView_Previews: PreviewProvider {
     static var previews: some View {
         HowtoTakeView(name: "김경숙")
     }
 }
-

@@ -60,7 +60,7 @@ struct RecallAlertView: View {
         }
         .toolbar {
             NavigationLink {
-                //                RecallAlertView()
+                HowtoTakeView()
             } label: {
                 Text("다음")
             }
