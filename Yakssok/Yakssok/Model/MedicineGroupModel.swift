@@ -18,14 +18,14 @@ struct MedicineGroup: Identifiable {
     static var dummyData: [MedicineGroup] {
         return [
             MedicineGroup(id: UUID(),
-                          groupName: "장기복용약",
+                          groupName: "오복희",
                           medicines: ManagedMedicine.longTermMedicines,
                           isLongTerm: true,
                           startDate: Calendar.current.date(from: DateComponents(year: 2023, month: 3, day: 6))!,
                           endDate: Calendar.current.date(from: DateComponents(year: 2023, month: 12, day: 8))!
                          ),
             MedicineGroup(id: UUID(),
-                          groupName: "감기 단기 복용약",
+                          groupName: "김순태",
                           medicines: ManagedMedicine.shortTermMedicines,
                           isLongTerm: false,
                           startDate: Calendar.current.date(from: DateComponents(year: 2023, month: 8, day: 23))!,

@@ -13,7 +13,7 @@ struct PersonAddView: View {
     @State var isDone = false
     @State var isTapped1 = false
     @State var isTapped2 = false
-    
+
     let leftButton = "chevron.left"
     let rightButton = "다음"
     let title1 = "어르신의 이름은 무엇인가요?"
@@ -21,42 +21,41 @@ struct PersonAddView: View {
     let placeholder = "이름을 입력해주세요"
     let margin = 24.0
     let radius = 8.0
-    
+
     var body: some View {
-        NavigationView {
-            VStack {
-                if !isDone {
-                    PersonTypeView()
-                } else {
-                    PrescriptionCheckView()
-                }
-                Spacer()
+        VStack {
+            if !isDone {
+                PersonTypeView()
+            } else {
+                PrescriptionCheckView()
             }
-            .padding(.top, 60)
-            .padding(.horizontal, margin)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        isDone = false
-                    } label: {
-                        Image(systemName: leftButton)
-                            .foregroundColor(ColorTheme().gray.black)
-                    }
+            Spacer()
+        }
+        .padding(.top, 60)
+        .padding(.horizontal, margin)
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    isDone = false
+                } label: {
+                    Image(systemName: leftButton)
+                        .foregroundColor(ColorTheme().gray.black)
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        isDone = true
-                    } label: {
-                        Text(rightButton)
-                            .font(.headlineSemiBold)
-                            .foregroundColor(handlerightButtonColor())
-                    }
-                    .disabled((name.isEmpty) && (isTapped1 == false) && (isTapped2 == false))
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    isDone = true
+                } label: {
+                    Text(rightButton)
+                        .font(.headlineSemiBold)
+                        .foregroundColor(handlerightButtonColor())
                 }
+                .disabled((name.isEmpty) && (isTapped1 == false) && (isTapped2 == false))
             }
         }
     }
-    
+
     func handlerightButtonColor() -> Color {
         if (name.isEmpty) && (isTapped1 == false) && (isTapped2 == false) {
             return ColorTheme().gray.gray4
@@ -64,7 +63,7 @@ struct PersonAddView: View {
             return ColorTheme().gray.black
         }
     }
-    
+
     func handleStrokeColor(_ isChanged: Bool) -> Color {
         if isChanged {
             return ColorTheme().primary.main40
@@ -72,7 +71,7 @@ struct PersonAddView: View {
             return ColorTheme().gray.gray5
         }
     }
-    
+
     private func handleSelectButtonLabel(_ isChanged: Binding<Bool>) -> Color {
         if isChanged.wrappedValue {
             return ColorTheme().gray.gray1
@@ -80,7 +79,7 @@ struct PersonAddView: View {
             return ColorTheme().gray.gray3
         }
     }
-    
+
     private func handleSelectButtonColor(_ isChanged: Binding<Bool>) -> Color {
         if isChanged.wrappedValue {
             return ColorTheme().primary.main10
@@ -89,14 +88,14 @@ struct PersonAddView: View {
         }
     }
 }
+
 private extension PersonAddView {
-    
     @ViewBuilder
     func PersonTypeView() -> some View {
         VStack(alignment: .leading, spacing: 45) {
             Text(title1)
                 .font(.title1Bold)
-            
+
             TextField(placeholder, text: $name, onEditingChanged: { editing in
                 self.isEditing = editing
             })
@@ -111,11 +110,10 @@ private extension PersonAddView {
 }
 
 private extension PersonAddView {
-    
     enum SelectButton {
         case no
         case yes
-        
+
         var label: String {
             switch self {
             case .no:
@@ -125,13 +123,13 @@ private extension PersonAddView {
             }
         }
     }
-    
+
     @ViewBuilder
     func PrescriptionCheckView() -> some View {
         VStack(alignment: .leading, spacing: 45) {
             Text(title2)
                 .font(.title1Bold)
-            
+
             HStack(spacing: 25) {
                 selectButton($isTapped1, $isTapped2, SelectButton.no)
                     .background(
@@ -151,12 +149,11 @@ private extension PersonAddView {
 }
 
 private extension PersonAddView {
-    
     @ViewBuilder
     func selectButton(_ isChanged1: Binding<Bool>, _ isChanged2: Binding<Bool>, _ buttonType: SelectButton) -> some View {
         Button {
-                isChanged1.wrappedValue.toggle()
-                isChanged2.wrappedValue = false
+            isChanged1.wrappedValue.toggle()
+            isChanged2.wrappedValue = false
         } label: {
             Text(buttonType.label)
                 .foregroundColor(handleSelectButtonLabel(isChanged1))

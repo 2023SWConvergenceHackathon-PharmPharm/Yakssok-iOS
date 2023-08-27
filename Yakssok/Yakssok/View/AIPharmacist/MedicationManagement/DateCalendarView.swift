@@ -9,25 +9,25 @@ import SwiftUI
 
 struct DateCalendarView: View {
     @State var today: Int = 0
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             header
                 .padding(.leading, 24)
-            
+
             ScrollViewReader { proxy in
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
                         ForEach(getListOfMonth(), id: \.self) { date in
                             let day = Calendar.current.component(.day, from: date)
                             
-                            DateComponent(date: date, isDone: .random(), isToday: day==today)
+                            DateComponent(date: date, isDone: day < today, isToday: day == today)
                                 .id(day)
                         }
                     }
                 }
                 .frame(height: 53)
-                .onChange(of: today) { newValue in
+                .onChange(of: today) { _ in
                     withAnimation {
                         proxy.scrollTo(today, anchor: .center)
                     }
@@ -38,32 +38,32 @@ struct DateCalendarView: View {
             today = getTodayDate()
         }
     }
-    
+
     func getTodayDate() -> Int {
         let calendar = Calendar.current
         let now = Date.now
-        
+
         return calendar.component(.day, from: now)
     }
-    
+
     func getNowMonth() -> Int {
         let calendar = Calendar.current
         let now = Date.now
-        
+
         return calendar.component(.month, from: now)
     }
-    
+
     func getListOfMonth() -> [Date] {
         let calendar = Calendar.current
-        
+
         let startDate = calendar.date(from: Calendar.current.dateComponents([.year, .month], from: .now))!
-        
+
         let components = (
-            0..<calendar.range(of: .day, in: .month, for: startDate)!.count)
+            0 ..< calendar.range(of: .day, in: .month, for: startDate)!.count)
             .map {
                 calendar.date(byAdding: .day, value: $0, to: startDate)!
             }
-        
+
         return components
     }
 }

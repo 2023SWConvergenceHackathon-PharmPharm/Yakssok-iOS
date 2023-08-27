@@ -66,17 +66,18 @@ extension MainView {
             Spacer()
             
             NavigationLink {
-                SearchView()
+                CameraReconfirmView()
             } label: {
                 Image(systemName: "magnifyingglass")
+                    .font(.system(size: 12, weight: .bold))
                     .foregroundColor(.theme.primary.main0)
                     .padding(7)
                     .background(Color.theme.primary.main40)
                     .cornerRadius(8)
             }
             
-            Button {
-                // 약 추가하기
+            NavigationLink {
+                PersonAddView()
             } label: {
                 HStack(spacing: 0) {
                     Image(systemName: "plus")

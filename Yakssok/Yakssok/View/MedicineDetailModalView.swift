@@ -12,14 +12,14 @@ struct MedicineDetailModalView: View {
     @StateObject var medication: Medication = .init()
     @Binding var isShow: Bool
     var medName: String
-
+    var percent: Int
     var body: some View {
         ZStack {
             ScrollView {
                 HStack(alignment: .bottom, spacing: 8) {
                     Text(medication.medicationDetail["의약품 이름"] ?? "")
                         .font(.pretendard(size: 26, .bold))
-                    Text("유사도 98%")
+                    Text("유사도 \(percent)%")
                         .font(.subheadlineSemiBold)
                         .foregroundColor(Color.theme.medicine.first)
                     Spacer()

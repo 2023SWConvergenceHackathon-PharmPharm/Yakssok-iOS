@@ -13,6 +13,16 @@
 		1B070CC02A9A63F700D34A98 /* RecallAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B070CBF2A9A63F700D34A98 /* RecallAlertView.swift */; };
 		1B3914AE2A9A6C7B001115CF /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914AD2A9A6C7B001115CF /* TestView.swift */; };
 		1B3914B02A9A70E8001115CF /* MedicineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914AF2A9A70E8001115CF /* MedicineDetailView.swift */; };
+		1B3914B42A9A8D6E001115CF /* MedicationSelectBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914B32A9A8D6E001115CF /* MedicationSelectBox.swift */; };
+		1B3914B62A9A979E001115CF /* MedicationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914B52A9A979E001115CF /* MedicationBlock.swift */; };
+		1B3914B82A9A97BF001115CF /* MedicationTempBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914B72A9A97BF001115CF /* MedicationTempBlock.swift */; };
+		1B3914BA2A9A9926001115CF /* MedicineDetailViewWithSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914B92A9A9926001115CF /* MedicineDetailViewWithSubmitButton.swift */; };
+		1B3914BC2A9AA792001115CF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914BB2A9AA792001115CF /* RegisterView.swift */; };
+		1B3914BE2A9AA83A001115CF /* RegisterRecognizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914BD2A9AA83A001115CF /* RegisterRecognizeView.swift */; };
+		1B3914C02A9AA8D2001115CF /* RegisterRedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914BF2A9AA8D2001115CF /* RegisterRedView.swift */; };
+		1B3914C62A9AAD02001115CF /* RegisterGreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914C52A9AAD02001115CF /* RegisterGreenView.swift */; };
+		1B3914C82A9AAD27001115CF /* RegisterPurpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914C72A9AAD27001115CF /* RegisterPurpleView.swift */; };
+		1B3914CA2A9AB116001115CF /* RegisterBlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3914C92A9AB116001115CF /* RegisterBlueView.swift */; };
 		1B3C2D3E2A98BE4A00CAE5B8 /* MedicineDetailModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailModalView.swift */; };
 		1B3C2D412A98E7BE00CAE5B8 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 1B3C2D402A98E7BE00CAE5B8 /* SwiftSoup */; };
 		1B3C2D432A98ED7000CAE5B8 /* empty.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B3C2D422A98ED7000CAE5B8 /* empty.html */; };
@@ -64,6 +74,16 @@
 		1B070CBF2A9A63F700D34A98 /* RecallAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallAlertView.swift; sourceTree = "<group>"; };
 		1B3914AD2A9A6C7B001115CF /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		1B3914AF2A9A70E8001115CF /* MedicineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailView.swift; sourceTree = "<group>"; };
+		1B3914B32A9A8D6E001115CF /* MedicationSelectBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationSelectBox.swift; sourceTree = "<group>"; };
+		1B3914B52A9A979E001115CF /* MedicationBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationBlock.swift; sourceTree = "<group>"; };
+		1B3914B72A9A97BF001115CF /* MedicationTempBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTempBlock.swift; sourceTree = "<group>"; };
+		1B3914B92A9A9926001115CF /* MedicineDetailViewWithSubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailViewWithSubmitButton.swift; sourceTree = "<group>"; };
+		1B3914BB2A9AA792001115CF /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		1B3914BD2A9AA83A001115CF /* RegisterRecognizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRecognizeView.swift; sourceTree = "<group>"; };
+		1B3914BF2A9AA8D2001115CF /* RegisterRedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRedView.swift; sourceTree = "<group>"; };
+		1B3914C52A9AAD02001115CF /* RegisterGreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGreenView.swift; sourceTree = "<group>"; };
+		1B3914C72A9AAD27001115CF /* RegisterPurpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPurpleView.swift; sourceTree = "<group>"; };
+		1B3914C92A9AB116001115CF /* RegisterBlueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBlueView.swift; sourceTree = "<group>"; };
 		1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailModalView.swift; sourceTree = "<group>"; };
 		1B3C2D422A98ED7000CAE5B8 /* empty.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = empty.html; sourceTree = "<group>"; };
 		1B3C2D462A98F4A400CAE5B8 /* MedicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationModel.swift; sourceTree = "<group>"; };
@@ -162,6 +182,7 @@
 		3D5ED5C12A97962600CAFCEC /* Yakssok */ = {
 			isa = PBXGroup;
 			children = (
+				1B070CBB2A9A45AB00D34A98 /* met.html */,
 				3D5ED5C22A97962600CAFCEC /* YakssokApp.swift */,
 				3D5ED5D02A979BF100CAFCEC /* View */,
 				3D5ED5F12A97ADD700CAFCEC /* ViewModel */,
@@ -192,10 +213,12 @@
 				5B5EE5162A9A5CCB00402D8E /* HowtoTakeView.swift */,
 				1B3C2D3D2A98BE4A00CAE5B8 /* MedicineDetailModalView.swift */,
 				1B3914AF2A9A70E8001115CF /* MedicineDetailView.swift */,
+				1B3914B92A9A9926001115CF /* MedicineDetailViewWithSubmitButton.swift */,
 				1B3C2D422A98ED7000CAE5B8 /* empty.html */,
-				1B070CBB2A9A45AB00D34A98 /* met.html */,
 				1B3C2D482A99906200CAE5B8 /* SearchMedicationView.swift */,
 				1B070CB92A9A2CDB00D34A98 /* DURAlertView.swift */,
+				1B3914B52A9A979E001115CF /* MedicationBlock.swift */,
+				1B3914B72A9A97BF001115CF /* MedicationTempBlock.swift */,
 				1B3914AD2A9A6C7B001115CF /* TestView.swift */,
 				5B92DD002A9A7A0D0024F07A /* TakeDoneView.swift */,
 				1B070CBF2A9A63F700D34A98 /* RecallAlertView.swift */,
@@ -288,6 +311,13 @@
 				BFF45D062A9A67A80027E72F /* ChooseMedicineView.swift */,
 				BFF45D082A9A684C0027E72F /* SelectMedicineView.swift */,
 				BFF45D0A2A9A71200027E72F /* ConfirmMedicineView.swift */,
+				1B3914B32A9A8D6E001115CF /* MedicationSelectBox.swift */,
+				1B3914BB2A9AA792001115CF /* RegisterView.swift */,
+				1B3914BD2A9AA83A001115CF /* RegisterRecognizeView.swift */,
+				1B3914BF2A9AA8D2001115CF /* RegisterRedView.swift */,
+				1B3914C92A9AB116001115CF /* RegisterBlueView.swift */,
+				1B3914C52A9AAD02001115CF /* RegisterGreenView.swift */,
+				1B3914C72A9AAD27001115CF /* RegisterPurpleView.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -385,9 +415,11 @@
 				5B5EE5172A9A5CCB00402D8E /* HowtoTakeView.swift in Sources */,
 				3D5ED60C2A991E4F00CAFCEC /* ManagedMedicineModel.swift in Sources */,
 				3D5ED6062A99122400CAFCEC /* MedicineModel.swift in Sources */,
+				1B3914CA2A9AB116001115CF /* RegisterBlueView.swift in Sources */,
 				5B92DD012A9A7A0D0024F07A /* TakeDoneView.swift in Sources */,
 				3D5ED5F82A98C51600CAFCEC /* MainView.swift in Sources */,
 				BFF45D072A9A67A80027E72F /* ChooseMedicineView.swift in Sources */,
+				1B3914BE2A9AA83A001115CF /* RegisterRecognizeView.swift in Sources */,
 				3D5ED5C52A97962600CAFCEC /* ContentView.swift in Sources */,
 				5B5EE5192A9A661300402D8E /* Ex+ String.swift in Sources */,
 				3D5ED5F62A98BA2300CAFCEC /* AddGuideView.swift in Sources */,
@@ -396,23 +428,30 @@
 				3D5ED6022A99007500CAFCEC /* Ex+ View.swift in Sources */,
 				3D5ED6082A99123500CAFCEC /* MedicineGroupModel.swift in Sources */,
 				BFF45D022A9A5D890027E72F /* SearchView.swift in Sources */,
+				1B3914B42A9A8D6E001115CF /* MedicationSelectBox.swift in Sources */,
 				BFF45D0B2A9A71200027E72F /* ConfirmMedicineView.swift in Sources */,
+				1B3914C02A9AA8D2001115CF /* RegisterRedView.swift in Sources */,
 				BFF45D092A9A684C0027E72F /* SelectMedicineView.swift in Sources */,
-				1B3914B22A9A72FA001115CF /* TestModel.swift in Sources */,
+				1B3914BC2A9AA792001115CF /* RegisterView.swift in Sources */,
 				3D5ED5C32A97962600CAFCEC /* YakssokApp.swift in Sources */,
 				3D5ED6002A98FC3200CAFCEC /* MedicineRow.swift in Sources */,
 				BFF45D052A9A678D0027E72F /* CameraReconfirmView.swift in Sources */,
+				1B3914BA2A9A9926001115CF /* MedicineDetailViewWithSubmitButton.swift in Sources */,
 				3D5ED60A2A991D8600CAFCEC /* MedicationManagementViewModel.swift in Sources */,
+				1B3914C82A9AAD27001115CF /* RegisterPurpleView.swift in Sources */,
 				3D5ED5FA2A98CAE800CAFCEC /* DateCalendarView.swift in Sources */,
+				1B3914B62A9A979E001115CF /* MedicationBlock.swift in Sources */,
 				1B3C2D492A99906200CAE5B8 /* SearchMedicationView.swift in Sources */,
 				3D5ED6042A990E0500CAFCEC /* Ex+ Transition.swift in Sources */,
 				3D5ED5FC2A98D2B600CAFCEC /* DateComponent.swift in Sources */,
 				5B5EE5132A9A3E5B00402D8E /* PersonAddView.swift in Sources */,
+				1B3914C62A9AAD02001115CF /* RegisterGreenView.swift in Sources */,
 				1B3C2D472A98F4A400CAE5B8 /* MedicationModel.swift in Sources */,
 				3D5ED5D42A979C2E00CAFCEC /* Ex+ Color.swift in Sources */,
 				1B070CB62A99D30900D34A98 /* SearchMedicationModel.swift in Sources */,
 				1B3914B02A9A70E8001115CF /* MedicineDetailView.swift in Sources */,
 				1B070CC02A9A63F700D34A98 /* RecallAlertView.swift in Sources */,
+				1B3914B82A9A97BF001115CF /* MedicationTempBlock.swift in Sources */,
 				1B3C2D3E2A98BE4A00CAE5B8 /* MedicineDetailModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,7 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yakssok/Preview Content\"";
-				DEVELOPMENT_TEAM = M6KTL34CVP;
+				DEVELOPMENT_TEAM = Q6S8GWB6BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yakssok/Resources/Info.plist;
@@ -557,7 +596,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = newyork.Yakssok;
+				PRODUCT_BUNDLE_IDENTIFIER = newyork.dom.Yakssok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -573,7 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yakssok/Preview Content\"";
-				DEVELOPMENT_TEAM = M6KTL34CVP;
+				DEVELOPMENT_TEAM = Q6S8GWB6BP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yakssok/Resources/Info.plist;
@@ -588,7 +627,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = newyork.Yakssok;
+				PRODUCT_BUNDLE_IDENTIFIER = newyork.dom.Yakssok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

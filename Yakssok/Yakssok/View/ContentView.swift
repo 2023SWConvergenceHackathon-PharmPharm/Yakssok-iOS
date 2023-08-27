@@ -9,36 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var medicationManagementViewModel: MedicationManagementViewModel
-    
+
     var body: some View {
-        TabView {
-            NavigationStack {
-                MainView()
-                    .environmentObject(medicationManagementViewModel)
-            }
-            .tabItem {
-                VStack {
-                    Image(systemName: "pills.fill")
-                    Text("나의 약")
-                }
-            }
-            
-            Text("지도")
-                .tabItem {
-                    VStack {
-                        Image(systemName: "map")
-                        Text("지도")
-                    }
-                }
-            
-            Text("검색")
-                .tabItem {
-                    VStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("나의 약")
-                    }
-                }
+        NavigationView {
+            MainView()
+                .environmentObject(medicationManagementViewModel)
         }
+        .accentColor(.black)
+        .navigationTitle("")
     }
 }
 

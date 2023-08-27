@@ -19,6 +19,7 @@ struct MedicineRow: View {
                 // 체크하셈
             } label: {
                 Image(systemName: medicine.isAllTaken ? "checkmark.circle.fill" : "checkmark.circle")
+                    .foregroundColor(Color.theme.primary.main40)
             }
             .padding(.trailing, 8)
             

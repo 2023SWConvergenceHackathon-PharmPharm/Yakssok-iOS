@@ -16,7 +16,7 @@ struct TestView: View {
             Text("GO")
         }
         .sheet(isPresented: $isShow) {
-            MedicineDetailModalView(isShow: $isShow, medName: "졸피뎀")
+            MedicineDetailModalView(isShow: $isShow, medName: "졸피뎀", percent: 12)
         }
 //        NavigationView {
 //            NavigationLink {
