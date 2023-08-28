@@ -1,6 +1,6 @@
 # <img src="https://github.com/2023SWConvergenceHackathon-PharmPharm/Yakssok-iOS/assets/77708819/ae57cb50-1bcf-4b28-aec3-3285547f6814" width=30px> Yakssok
 
-![커버이미지](https://github.com/2023SWConvergenceHackathon-PharmPharm/Yakssok-iOS/assets/77708819/ab8660a3-9bfa-4f92-8a74-e19d1eb40a09)
+![커버이미지](https://github.com/2023SWConvergenceHackathon-PharmPharm/Yakssok-iOS/assets/77708819/eae48793-272e-4d80-90e9-e484d1c3c697)
 
 ### 💊 About 약쏙
 <img alt="고령화사회" src="https://github.com/2023SWConvergenceHackathon-PharmPharm/Yakssok-iOS/assets/77708819/3b915774-42a7-45c7-a905-4898312d057c">
